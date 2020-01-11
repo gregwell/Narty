@@ -1,7 +1,11 @@
 #pragma once
+#include <iostream>
+#include <string>
 #include "pch.h"
 #include "header.h"
 #include "source.cpp"
+
+using namespace std;
 
 int main()
 {

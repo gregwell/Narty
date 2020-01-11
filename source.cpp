@@ -1,6 +1,10 @@
 ﻿#pragma once
+#include <iostream>
+#include <string>
 #include "header.h"
 #include "pch.h"
+
+using namespace std;
 
 void Wypozyczalnia::dodaj_rezerwacje()
 {
