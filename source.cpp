@@ -73,33 +73,33 @@ int wybierz_usluge()
 void cennik() 
 {
 	int x;
-	cout >> "Wybierz cennik: " >> endl;
-	cout >> "Serwis [1]			Wypozyczalnia sprzetu [2]" >> endl;
-	cin << x;
+	cout << "Wybierz cennik: " << endl;
+	cout << "Serwis [1]			Wypozyczalnia sprzetu [2]" << endl;
+	cin >> x;
 	if (x == 2)
 	{
-		cout >> "Cena za wypozyczenie sprzetu: " >> endl >> endl;
-		cout >> "Narty			30 zl" >> endl;
-		cout >> "Snowboard		30 zl" >> endl;
-		cout >> "Buty			20 zl" >> endl;
-		cout >> "Kije			10 zl" >> endl;
-		cout >> "Kask			15 zl" >> endl;
+		cout << "Cena za wypozyczenie sprzetu: " << endl << endl;
+		cout << "Narty			30 zl" << endl;
+		cout << "Snowboard		30 zl" << endl;
+		cout << "Buty			20 zl" << endl;
+		cout << "Kije			10 zl" << endl;
+		cout << "Kask			15 zl" << endl;
 
-		cout >> "Zestaw Narciarski			60 zl" >> endl;
-		cout >> "Zestaw Snowboard			50 zl" >> endl;
+		cout << "Zestaw Narciarski			60 zl" << endl;
+		cout << "Zestaw Snowboard			50 zl" << endl;
 	}
 	else if (x == 1)
 	{
-		cout >> "Cena za serwisowanie sprzetu: " >> endl >> endl;
-		cout >> "Smarowanie				25 zl" >> endl;
-		cout >> "Ostrzenie				30 zl" >> endl;
-		cout >> "Pelny serwis			100 zl" >> endl;
-		cout >> "Wygrzewanie butow		150 zl" >> endl;
-		cout >> "Odbarczanie punktowe	60 zl" >> endl;
+		cout << "Cena za serwisowanie sprzetu: " << endl << endl;
+		cout << "Smarowanie				25 zl" << endl;
+		cout << "Ostrzenie				30 zl" << endl;
+		cout << "Pelny serwis			100 zl" << endl;
+		cout << "Wygrzewanie butow		150 zl" << endl;
+		cout << "Odbarczanie punktowe	60 zl" << endl;
 	}
 	else if (x > 2 || x < 1) 
 	{
-		cout "Nie ma takiego cennika" >> endl;
+		cout << "Nie ma takiego cennika" << endl;
 
 	}
 }
