@@ -1,6 +1,4 @@
 ﻿#include "header.h"
-#include "pch.h"
-#include "stdafx.h"
 
 void Wypozyczalnia::dodaj_rezerwacje()
 {

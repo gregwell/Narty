@@ -4,7 +4,6 @@
 #include "pch.h"
 #include "stdafx.h"
 
-
 using namespace std;
 
 struct Data
