@@ -6,7 +6,8 @@ int main()
 {
 	Pracownik p;
 	p.Login();
-
+	//grzegorz chuj
+	//chuj ci w leb
 	system("pause");
 	return 0;
 }
