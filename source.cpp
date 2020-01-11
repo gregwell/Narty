@@ -2,9 +2,6 @@
 #include "pch.h"
 #include "stdafx.h"
 
-
-using namespace std;
-
 void Wypozyczalnia::dodaj_rezerwacje()
 {
 	Data data;
