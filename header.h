@@ -5,9 +5,8 @@
 
 using namespace std;
 
-class Data
+struct Data
 {
-public:
 	int dzien;
 	int miesiac;
 	int rok;
@@ -41,13 +40,6 @@ private:
 	string imie;
 	string nazwisko;
 	string kwalifikacje;
-};
-
-
-class Uslugi
-{
-public:
-	inline int wybierz_usluge();
 };
 
 class Klient
@@ -109,3 +101,4 @@ public:
 	inline void platnosc();
 };
 
+inline int wybierz_usluge();

@@ -1,8 +1,6 @@
-﻿#include "header.h"
+﻿#pragma once
+#include "header.h"
 #include "pch.h"
-#include <string>
-
-using namespace std;
 
 void Wypozyczalnia::dodaj_rezerwacje()
 {
@@ -24,14 +22,13 @@ void Pracownik::Login()
 		cout << "Podaj hasło : ";
 		cin >> userPass;
 
-
 		if (userName == "greg69" && userPass == "qwerty")
 		{
 			cout << "Witaj Grzegorz Studziński!\n";
 			break;
 		}
 
-		else if (userName == "michauu" && userPass == "ytrewq")
+		else if (userName == "janosik" && userPass == "maryna")
 		{
 			cout << "Witaj Michał Stawarski!\n";
 			break;
@@ -43,9 +40,29 @@ void Pracownik::Login()
 			break;
 		}
 
-		else
-		{
-			cout << "Błąd w logowaniu\n";
-		}
+		cout << "Błąd w logowaniu\n";
 	}
 }
+
+int wybierz_usluge()
+{
+	cout << "Menu:\n";
+	cout << "1. Rejestracja\n";
+	cout << "2. Rezerwacja\n";
+	cout << "3. Wypożyczenie\n";
+	cout << "4. Zarządzanie sprzętem\n";
+	cout << "5. Cennik\n";
+
+	int x;
+	cin >> x;
+
+	if (x > 5 || x < 1)
+	{
+		cout << "Blad!!!\n\n";
+		wybierz_usluge();
+	}
+
+	else
+		return x;
+}
+

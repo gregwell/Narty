@@ -1,14 +1,15 @@
-#include  "source.cpp"
+#pragma once
 #include "pch.h"
 #include "header.h"
+#include "source.cpp"
 
 int main()
 {
 	Pracownik p;
 	p.Login();
-	//grzegorz chuj
-	//chuj ci w leb
+
+	int menu = wybierz_usluge();
+
 	system("pause");
 	return 0;
 }
-
