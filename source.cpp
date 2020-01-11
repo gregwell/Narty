@@ -1,4 +1,5 @@
 ﻿#include "header.h"
+#include "pch.h"
 
 void Wypozyczalnia::dodaj_rezerwacje()
 {

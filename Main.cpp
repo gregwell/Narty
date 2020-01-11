@@ -1,4 +1,5 @@
 #include "source.cpp"
+#include "pch.h"
 
 int main()
 {
@@ -7,6 +8,17 @@ int main()
 
 	int menu = wybierz_usluge();
 
+	while (1)
+	{
+		switch (menu)
+		{
+		case(5):
+		{
+			cennik();
+			break;
+		}
+		}
+	}
 	system("pause");
 	return 0;
 }
