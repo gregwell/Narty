@@ -1,7 +1,4 @@
-﻿#pragma once
-#include <iostream>
-#include <string>
-#include "header.h"
+﻿#include "header.h"
 #include "pch.h"
 #include "stdafx.h"
 
