@@ -3,6 +3,8 @@
 #include <string>
 #include "header.h"
 #include "pch.h"
+#include "stdafx.h"
+
 
 using namespace std;
 
