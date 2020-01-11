@@ -94,13 +94,24 @@ public:
 class Cennik
 {
 private:
-	int cena_dla_początkujących;
-	int cena_dla_zaawansowanych;
-	int cena_wypożyczenia;
-	int cena_naprawy;
-
+	int narty;
+	int snowboard;
+	int buty;
+	int kije;
+	int kask;
+	int zestaw_narciarski;
+	int zestaw_snowboard;
+	int smarowanie;
+	int ostrzenie;
+	int pelny_serwis;
+	int wygrzewanie_butow;
+	int odbarczanie_punktowe;
+	
 public:
 	inline void platnosc();
+	//narty, snowboard, buty, kije, kask, zestaw_narciarski, zestaw_snowboard, smarowanie, ostrzenie, pelny_serwis, wygrzewanie_butow, odbarczanie_punktowe
+	void wyswietl_ceny(narty, snowboard, buty, kije, kask, zestaw_narciarski, zestaw_snowboard, smarowanie, ostrzenie, pelny_serwis, wygrzewanie_butow, odbarczanie_punktowe);
+	void zmiana_cennika();
 };
 
 inline int wybierz_usluge();
