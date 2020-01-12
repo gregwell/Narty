@@ -12,7 +12,7 @@ int main()
 
 	int menu = wybierz_usluge();
 
-	while (x = 'q')
+	do
 	{	
 		switch (menu)
 		{
@@ -38,10 +38,7 @@ int main()
 
 		cout << "Czy chcesz kontynować?\nTAK[q]\tNIE[dowolny przycisk]\n";
 		cin >> x;
-
-		if (x != 'q')
-			break;
-	}
+	} while (x != 'q');
 
 	return 0;
 }
