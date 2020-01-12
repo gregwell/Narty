@@ -227,4 +227,4 @@ inline void Klient::rejestracja()
 
 
 
-}
+

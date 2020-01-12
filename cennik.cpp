@@ -43,6 +43,71 @@ void Cennik::zmiana_narty(int p)
 
 }
 
+void Cennik::zmiana_snowboard(int p)
+{
+	snowboard = p;
+
+}
+
+void Cennik::zmiana_buty(int p)
+{
+	buty = p;
+
+}
+
+void Cennik::zmiana_kije(int p)
+{
+	kije = p;
+
+}
+
+void Cennik::zmiana_kask(int p)
+{
+	kask = p;
+
+}
+
+void Cennik::zmiana_narciarski(int p)
+{
+	zestaw_narciarski = p;
+
+}
+
+void Cennik::zmiana_snowboard(int p)
+{
+	zestaw_snowboard = p;
+
+}
+
+void Cennik::zmiana_smarowanie(int p)
+{
+	smarowanie = p;
+
+}
+
+void Cennik::zmiana_ostrzenie(int p)
+{
+	ostrzenie = p;
+
+}
+
+void Cennik::zmiana_pelny(int p)
+{
+	pelny_serwis = p;
+
+}
+
+void Cennik::zmiana_wygrzewanie(int p)
+{
+	wygrzewanie_butow = p;
+
+}
+
+void Cennik::zmiana_odbarczanie(int p)
+{
+	odbarczanie_punktowe = p;
+
+}
 
 
 void Cennik::zmiana_cennika()
@@ -56,92 +121,117 @@ void Cennik::zmiana_cennika()
 	{
 	case(0):
 	{
-		return 0;
+		break;
 	}
 	case(1):
 	{
 		int x;
 		cout << "wprowadz cene: " << endl;
 		cin >> x;
-		zmiana_narty(x)
-		{
-			narty = x;
-
-		}
-
-
-		cin >> y;
-		narty = y;
+		zmiana_narty(x);
+		cout << "cena zmieniona na: " << narty << endl;
 		break;
 	}
 	case(2):
 	{
-		cin >> y;
-		snowboard = y;
+		int x;
+		cout << "wprowadz cene: " << endl;
+		cin >> x;
+		zmiana_snowboard(x);
+		cout << "cena zmieniona na: " << snowboard << endl;
 		break;
 	}
 	case(3):
 	{
-		cin >> y;
-		buty = y;
+		int x;
+		cout << "wprowadz cene: " << endl;
+		cin >> x;
+		zmiana_buty(x);
+		cout << "cena zmieniona na: " << buty << endl;
 		break;
 	}
 	case(4):
 	{
-		cin >> y;
-		kije = y;
+		int x;
+		cout << "wprowadz cene: " << endl;
+		cin >> x;
+		zmiana_kije(x);
+		cout << "cena zmieniona na: " << kije << endl;
 		break;
 	}
 	case(5):
 	{
-		cin >> y;
-		kask = y;
+		int x;
+		cout << "wprowadz cene: " << endl;
+		cin >> x;
+		zmiana_kask(x);
+		cout << "cena zmieniona na: " << kask << endl;
 		break;
 	}
 	case(6):
 	{
-		cin >> y;
-		zestaw_narciarski = y;
+		int x;
+		cout << "wprowadz cene: " << endl;
+		cin >> x;
+		zmiana_narciarski(x);
+		cout << "cena zmieniona na: " << zestaw_narciarski << endl;
 		break;
 	}
 	case(7):
 	{
-		cin >> y;
-		zestaw_snowboard = y;
+		int x;
+		cout << "wprowadz cene: " << endl;
+		cin >> x;
+		zmiana_snowboardowy(x);
+		cout << "cena zmieniona na: " << zestaw_snowboard << endl;
 		break;
 	}
 	case(8):
 	{
-		cin >> y;
-		smarowanie = y;
+		int x;
+		cout << "wprowadz cene: " << endl;
+		cin >> x;
+		zmiana_smarowanie(x);
+		cout << "cena zmieniona na: " << smarowanie << endl;
 		break;
 	}
 	case(9):
 	{
-		cin >> y;
-		ostrzenie = y;
+		int x;
+		cout << "wprowadz cene: " << endl;
+		cin >> x;
+		zmiana_ostrzenie(x);
+		cout << "cena zmieniona na: " << ostrzenie << endl;
 		break;
 	}
 	case(10):
 	{
-		cin >> y;
-		pelny_serwis = y;
+		int x;
+		cout << "wprowadz cene: " << endl;
+		cin >> x;
+		zmiana_pelny(x);
+		cout << "cena zmieniona na: " << pelny_serwis << endl;
 		break;
 	}
 	case(11):
 	{
-		cin >> y;
-		wygrzewanie_butow = y;
+		int x;
+		cout << "wprowadz cene: " << endl;
+		cin >> x;
+		zmiana_wygrzewanie(x);
+		cout << "cena zmieniona na: " << wygrzewanie_butow << endl;
 		break;
 	}
 	case(12):
 	{
-		cin >> y;
-		odbarczanie_punktowe = y;
+		int x;
+		cout << "wprowadz cene: " << endl;
+		cin >> x;
+		zmiana_odbarczanie(x);
+		cout << "cena zmieniona na: " << odbarczanie_punktowe << endl;
 		break;
 	}
-	default{
-		zmiana_cennika();
+	
 	}
-	}
+}
 
