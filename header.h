@@ -18,7 +18,6 @@ class Wypozyczalnia : public Data
 
 public:
 	void dodaj_rezerwacje();
-	int zarejestruj_klienta();
 	int dodaj_wypozyczenie();
 	int zwroc_sprzet();
 };
@@ -41,10 +40,8 @@ private:
 	string kwalifikacje;
 };
 
-class Klient
+class Klient : public Data
 {
-	friend class Rejestracja;
-
 private:
 	string imie;
 	string nazwisko;
@@ -53,7 +50,8 @@ private:
 class Rejestracja
 {
 public:
-	void rejestracja();
+	friend class Klient;
+	int rejestracja();
 };
 
 class Zarzadzanie

@@ -137,6 +137,11 @@ inline int wybierz_usluge()
 		return x;
 }
 
+/*inline int Rejestracja::rejestracja()
+{
+	cout << 
+}*/
+
 inline void cennik()
 {
 	int x;
