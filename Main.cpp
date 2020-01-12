@@ -8,7 +8,7 @@ int main()
 
 	char x;
 	Pracownik p;
-	Wypozyczalnia rez;
+	Rezerwacja rez;
 	Klient reg;
 	Cennik cena;
 
