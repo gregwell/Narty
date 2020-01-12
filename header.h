@@ -76,9 +76,6 @@ public:
 
 class Lekcja : private Data
 {
-private:
-	int czas;
-
 public:
 	int wybierz_dzien();
 	int wybierz_sprzet();
@@ -115,7 +112,7 @@ Cennik()
 	pelny_serwis = 100;
 	wygrzewanie_butow = 150;
 	odbarczanie_punktowe = 60;
-	}
+}
 	void zmiana_cennika();
 	void zmiana_narty(int p);
 	void zmiana_snowboard(int p);
@@ -131,5 +128,4 @@ Cennik()
 	void zmiana_odbarczanie(int p);
 	void wyswietl_ceny();
 	void cennik_widok();
-	;
 };

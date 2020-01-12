@@ -156,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cennik.cpp" />
+    <ClCompile Include="lekcja.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="source.cpp" />
     <ClCompile Include="pch.cpp">

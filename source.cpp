@@ -222,9 +222,3 @@ inline void Klient::rejestracja()
 	file << "." << k.rok << endl;
 	file.close();
 }
-
-
-
-
-
-

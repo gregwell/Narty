@@ -35,5 +35,8 @@
     <ClCompile Include="cennik.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="lekcja.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
