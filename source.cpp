@@ -136,7 +136,7 @@ inline int wybierz_usluge()
 		return x;
 }
 
-inline int Klient::rejestracja()
+inline void Klient::rejestracja()
 {
 	Klient k;
 
@@ -154,6 +154,7 @@ inline int Klient::rejestracja()
 		cout << "Miesiac: ";
 		cin >> k.miesiac;
 		cout << "Rok: ";
+		cin >> k.rok;
 
 		if (k.dzien >= 1 && k.miesiac >= 1)
 		{
@@ -185,7 +186,22 @@ inline int Klient::rejestracja()
 	}
 
 	cout << "Pomyslnie zarejestrowano!\n";
+	cout << "Imie:\t" << k.imie << "\nNazwisko:\t" << k.nazwisko << endl;
+	cout << "Data urodzenia: ";
 
+	if (k.dzien < 10)
+		cout << "0" << k.dzien;
+
+	else
+		cout << k.dzien;
+
+	if (k.miesiac < 10)
+		cout << ".0" << k.miesiac;
+
+	else
+		cout << "." << k.miesiac;
+
+	cout << "." << k.rok << endl;
 }
 
 inline void cennik()

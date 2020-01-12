@@ -8,6 +8,7 @@ int main()
 	char x;
 	Pracownik p;
 	Wypozyczalnia rez;
+	Klient reg;
 
 	p.Login();			
 
@@ -23,7 +24,8 @@ int main()
 		}
 		case(1):
 		{
-
+			reg.rejestracja();
+			break;
 		}
 		case(2):
 		{

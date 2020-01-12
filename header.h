@@ -10,8 +10,6 @@ public:
 	int dzien;
 	int miesiac;
 	int rok;
-
-	int k();
 };
 
 class Wypozyczalnia : public Data
@@ -50,7 +48,7 @@ private:
 	string nazwisko;
 
 public:
-	int rejestracja();
+	void rejestracja();
 };
 
 class Zarzadzanie
