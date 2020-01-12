@@ -2,7 +2,7 @@
 #include "header.h"
 
 using namespace std;
-
+void Cennik::cennik_widok();
 void Cennik::wyswietl_ceny()
 {
 	int x;

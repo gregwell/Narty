@@ -36,7 +36,7 @@ int main()
 		}
 		case(5):
 		{
-			cennik_widok();
+			//cennik_widok();
 			break;
 		}
 		}
