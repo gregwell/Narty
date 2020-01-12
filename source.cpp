@@ -1,4 +1,12 @@
-﻿#include "header.h"
+﻿#include "pch.h"
+#include <iostream>
+#include "header.h"
+
+using namespace std;
+
+void funkcja() {
+	cout << "dd" << endl;
+}
 
 void Wypozyczalnia::dodaj_rezerwacje()
 {
@@ -64,7 +72,7 @@ int wybierz_usluge()
 		return x;
 }
 
-void cennik() 
+void cennik()
 {
 	int x;
 	cout << "Wybierz cennik: " << endl;
@@ -91,18 +99,9 @@ void cennik()
 		cout << "Wygrzewanie butow		150 zl" << endl;
 		cout << "Odbarczanie punktowe	60 zl" << endl;
 	}
-	else if (x > 2 || x < 1) 
+	else if (x > 2 || x < 1)
 	{
 		cout << "Nie ma takiego cennika" << endl;
 
 	}
-}
-
-void rejestracja() 
-{
-
-
-
-
-
 }
