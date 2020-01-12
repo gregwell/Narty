@@ -19,7 +19,7 @@ int main()
 	do
 	{	
 		int menu = wybierz_usluge();
-
+		
 		switch (menu)
 		{
 		case(0):
@@ -38,7 +38,7 @@ int main()
 		}
 		case(5):
 		{
-		//	cena.cennik_widok();
+			cena.cennik_widok();
 			break;
 		}
 		}

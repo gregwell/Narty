@@ -3,6 +3,9 @@
 #include <string>
 #include <fstream>
 #include <cstdlib>
+#include <stdlib.h>
+#include <cstdlib>
+
 using namespace std;
 
 class Data
@@ -108,22 +111,78 @@ private:
 	
 public:
 Cennik() 
-{
-	narty = 30;
-	snowboard = 30;
-	buty = 20;
-	kije = 15;
-	kask = 15;
-	zestaw_narciarski = 50;
-	zestaw_snowboard = 50;
-	smarowanie = 20;
-	ostrzenie = 25;
-	pelny_serwis = 100;
-	wygrzewanie_butow = 150;
-	odbarczanie_punktowe = 60;
+{	
+	fstream cennik;
+	cennik.open("cennik.txt", ios::in);
+	int x;
+	string y;
+	for (x = 1; x <= 13; x++) {
+		if (x == 1) 
+		{
+			getline(cennik, y);
+			narty = atoi(y.c_str());
+		}
+		if(x==2)
+		{
+			getline(cennik, y);
+			snowboard = atoi(y.c_str());
+		}
+
+		if (x == 3) {
+			getline(cennik, y);
+			buty = atoi(y.c_str());
+			
+		}
+		if (x == 4) {
+			getline(cennik, y);
+			kije = atoi(y.c_str());
+		}
+		if(x==5)
+		{
+			getline(cennik, y);
+			kask = atoi(y.c_str());
+		}
+		if(x==6)
+		{
+			getline(cennik, y);
+			zestaw_narciarski = atoi(y.c_str());
+		}
+		if(x==7)
+		{
+			getline(cennik, y);
+			zestaw_snowboard = atoi(y.c_str());
+		}
+		if(x==8)
+		{
+			getline(cennik, y);
+			smarowanie = atoi(y.c_str());
+		}
+		if(x==9)
+		{
+			getline(cennik, y);
+			ostrzenie = atoi(y.c_str());
+		}
+		if(x==10)
+		{
+			getline(cennik, y);
+			pelny_serwis = atoi(y.c_str());
+		}
+		if(x==11)
+		{
+			getline(cennik, y);
+			wygrzewanie_butow = atoi(y.c_str());
+		}
+		if(x==12)
+		{
+			getline(cennik, y);
+			odbarczanie_punktowe = atoi(y.c_str());
+		}
+		if (x == 13)
+			cennik.close();
+	}
 }
 	void zmiana_cennika();
-	int zmiana_narty(int p, int h);
+	void zmiana_narty(int p);
 	void zmiana_snowboard(int p);
 	void zmiana_buty(int p);
 	void zmiana_kije(int p);

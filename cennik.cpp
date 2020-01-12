@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "header.h"
-
+#include <fstream>
 using namespace std;
 
 inline void Cennik::wyswietl_ceny()
@@ -13,10 +13,10 @@ inline void Cennik::wyswietl_ceny()
 	fstream cennik;
 	cennik.open("cennik.txt", ios::in);
 
-
+	if (cennik.good() == false) cout << "Nie mozna otworzyc pliku!";
+	int v;
 	if (x == 2)
 	{
-
 		cout << "Cena za wypozyczenie sprzetu: " << endl << endl;
 		cout << "Narty			" << narty << endl;
 		cout << "Snowboard		" << snowboard << endl;
@@ -43,80 +43,296 @@ inline void Cennik::wyswietl_ceny()
 	}
 }
 
-inline int Cennik::zmiana_narty(int p, int h)
+inline void Cennik::zmiana_narty(int p)
 {
-	int j=p;
+	/*int j=p;
 	int hh = h;
 	fstream cennik;
 	cennik.open("cennik.txt", ios::out);
 	cennik.write((char*)&j, hh);
 	cennik.close();
+	*/
+	fstream cennik;
+	cennik.open("cennik.txt", ios::out);
+
+	cennik << p << endl;
+	cennik << snowboard << endl;
+	cennik << buty << endl;
+	cennik << kije << endl;
+	cennik << kask << endl;
+	cennik << zestaw_narciarski << endl;
+	cennik << zestaw_snowboard << endl;
+	cennik << smarowanie << endl;
+	cennik << ostrzenie << endl;
+	cennik << pelny_serwis << endl;
+	cennik << wygrzewanie_butow << endl;
+	cennik << odbarczanie_punktowe << endl;
 	
-	return j;
+	cennik.close();
+
+	narty = p;
 }
 
 inline void Cennik::zmiana_snowboard(int p)
 {
+	fstream cennik;
+	cennik.open("cennik.txt", ios::out);
+
+	cennik << narty << endl;
+	cennik << p << endl;
+	cennik << buty << endl;
+	cennik << kije << endl;
+	cennik << kask << endl;
+	cennik << zestaw_narciarski << endl;
+	cennik << zestaw_snowboard << endl;
+	cennik << smarowanie << endl;
+	cennik << ostrzenie << endl;
+	cennik << pelny_serwis << endl;
+	cennik << wygrzewanie_butow << endl;
+	cennik << odbarczanie_punktowe << endl;
+
+	cennik.close();
+
 	snowboard = p;
 
 }
 
 inline void Cennik::zmiana_buty(int p)
 {
+	fstream cennik;
+	cennik.open("cennik.txt", ios::out);
+
+	cennik << narty << endl;
+	cennik << snowboard << endl;
+	cennik << p << endl;
+	cennik << kije << endl;
+	cennik << kask << endl;
+	cennik << zestaw_narciarski << endl;
+	cennik << zestaw_snowboard << endl;
+	cennik << smarowanie << endl;
+	cennik << ostrzenie << endl;
+	cennik << pelny_serwis << endl;
+	cennik << wygrzewanie_butow << endl;
+	cennik << odbarczanie_punktowe << endl;
+
+	cennik.close();
+
 	buty = p;
 
 }
 
 inline void Cennik::zmiana_kije(int p)
 {
+	fstream cennik;
+	cennik.open("cennik.txt", ios::out);
+
+	cennik << narty << endl;
+	cennik << snowboard << endl;
+	cennik << buty << endl;
+	cennik << p << endl;
+	cennik << kask << endl;
+	cennik << zestaw_narciarski << endl;
+	cennik << zestaw_snowboard << endl;
+	cennik << smarowanie << endl;
+	cennik << ostrzenie << endl;
+	cennik << pelny_serwis << endl;
+	cennik << wygrzewanie_butow << endl;
+	cennik << odbarczanie_punktowe << endl;
+
+	cennik.close();
+
 	kije = p;
 
 }
 
 inline void Cennik::zmiana_kask(int p)
 {
+	fstream cennik;
+	cennik.open("cennik.txt", ios::out);
+
+	cennik << narty << endl;
+	cennik << snowboard << endl;
+	cennik << buty << endl;
+	cennik << kije << endl;
+	cennik << p << endl;
+	cennik << zestaw_narciarski << endl;
+	cennik << zestaw_snowboard << endl;
+	cennik << smarowanie << endl;
+	cennik << ostrzenie << endl;
+	cennik << pelny_serwis << endl;
+	cennik << wygrzewanie_butow << endl;
+	cennik << odbarczanie_punktowe << endl;
+
+	cennik.close();
+
 	kask = p;
 
 }
 
 inline void Cennik::zmiana_narciarski(int p)
 {
+	fstream cennik;
+	cennik.open("cennik.txt", ios::out);
+
+	cennik << narty << endl;
+	cennik << snowboard << endl;
+	cennik << buty << endl;
+	cennik << kije << endl;
+	cennik << kask << endl;
+	cennik << p << endl;
+	cennik << zestaw_snowboard << endl;
+	cennik << smarowanie << endl;
+	cennik << ostrzenie << endl;
+	cennik << pelny_serwis << endl;
+	cennik << wygrzewanie_butow << endl;
+	cennik << odbarczanie_punktowe << endl;
+
+	cennik.close();
+
 	zestaw_narciarski = p;
 
 }
 
 inline void Cennik::zmiana_snowboardowy(int p)
 {
+	fstream cennik;
+	cennik.open("cennik.txt", ios::out);
+
+	cennik << narty << endl;
+	cennik << snowboard << endl;
+	cennik << buty << endl;
+	cennik << kije << endl;
+	cennik << kask << endl;
+	cennik << zestaw_narciarski << endl;
+	cennik << p << endl;
+	cennik << smarowanie << endl;
+	cennik << ostrzenie << endl;
+	cennik << pelny_serwis << endl;
+	cennik << wygrzewanie_butow << endl;
+	cennik << odbarczanie_punktowe << endl;
+
+	cennik.close();
+
 	zestaw_snowboard = p;
 
 }
 
 inline void Cennik::zmiana_smarowanie(int p)
 {
+	fstream cennik;
+	cennik.open("cennik.txt", ios::out);
+
+	cennik << narty << endl;
+	cennik << snowboard << endl;
+	cennik << buty << endl;
+	cennik << kije << endl;
+	cennik << kask << endl;
+	cennik << zestaw_narciarski << endl;
+	cennik << zestaw_snowboard << endl;
+	cennik << p << endl;
+	cennik << ostrzenie << endl;
+	cennik << pelny_serwis << endl;
+	cennik << wygrzewanie_butow << endl;
+	cennik << odbarczanie_punktowe << endl;
+
+	cennik.close();
+
 	smarowanie = p;
 
 }
 
 inline void Cennik::zmiana_ostrzenie(int p)
 {
+	fstream cennik;
+	cennik.open("cennik.txt", ios::out);
+
+	cennik << narty << endl;
+	cennik << snowboard << endl;
+	cennik << buty << endl;
+	cennik << kije << endl;
+	cennik << kask << endl;
+	cennik << zestaw_narciarski << endl;
+	cennik << zestaw_snowboard << endl;
+	cennik << smarowanie << endl;
+	cennik << p << endl;
+	cennik << pelny_serwis << endl;
+	cennik << wygrzewanie_butow << endl;
+	cennik << odbarczanie_punktowe << endl;
+
+	cennik.close();
+
 	ostrzenie = p;
 
 }
 
 inline void Cennik::zmiana_pelny(int p)
 {
+	fstream cennik;
+	cennik.open("cennik.txt", ios::out);
+
+	cennik << narty << endl;
+	cennik << snowboard << endl;
+	cennik << buty << endl;
+	cennik << kije << endl;
+	cennik << kask << endl;
+	cennik << zestaw_narciarski << endl;
+	cennik << zestaw_snowboard << endl;
+	cennik << smarowanie << endl;
+	cennik << ostrzenie << endl;
+	cennik << p << endl;
+	cennik << wygrzewanie_butow << endl;
+	cennik << odbarczanie_punktowe << endl;
+
+	cennik.close();
+
 	pelny_serwis = p;
 
 }
 
 inline void Cennik::zmiana_wygrzewanie(int p)
 {
+	fstream cennik;
+	cennik.open("cennik.txt", ios::out);
+
+	cennik << narty << endl;
+	cennik << snowboard << endl;
+	cennik << buty << endl;
+	cennik << kije << endl;
+	cennik << kask << endl;
+	cennik << zestaw_narciarski << endl;
+	cennik << zestaw_snowboard << endl;
+	cennik << smarowanie << endl;
+	cennik << ostrzenie << endl;
+	cennik << pelny_serwis << endl;
+	cennik << p << endl;
+	cennik << odbarczanie_punktowe << endl;
+
+	cennik.close();
+
 	wygrzewanie_butow = p;
 
 }
 
 inline void Cennik::zmiana_odbarczanie(int p)
 {
+	fstream cennik;
+	cennik.open("cennik.txt", ios::out);
+
+	cennik << p << endl;
+	cennik << snowboard << endl;
+	cennik << buty << endl;
+	cennik << kije << endl;
+	cennik << kask << endl;
+	cennik << zestaw_narciarski << endl;
+	cennik << zestaw_snowboard << endl;
+	cennik << smarowanie << endl;
+	cennik << ostrzenie << endl;
+	cennik << pelny_serwis << endl;
+	cennik << wygrzewanie_butow << endl;
+	cennik << p << endl;
+
+	cennik.close();
+
 	odbarczanie_punktowe = p;
 
 }
@@ -124,6 +340,7 @@ inline void Cennik::zmiana_odbarczanie(int p)
 
 inline void Cennik::zmiana_cennika()
 {
+	cout << string(50, '\n');
 	int x, y;
 	cout << "Wybierz produkt, ktorego cene chcesz zmienic: " << endl;
 	cout << "wyjscie [0]" << endl << "narty [1]" << endl << "snowboard [2]" << endl << "buty [3]" << endl << "kije [4]" << endl << "kask [5]" << endl << "zestaw_narciarski [6]" << endl << "zestaw_snowboard [7]" << endl << "smarowanie [8]" << endl << "ostrzenie [9]" << endl << "pelny serwis [10]" << endl << "wygrzewanie butow [11]" << endl << "odbarczanie punktowe [12]" << endl;
@@ -144,8 +361,8 @@ inline void Cennik::zmiana_cennika()
 		int x;
 		cout << "wprowadz cene: " << endl;
 		cin >> x;
-		zmiana_narty(x, 1);
-		cout << "cena zmieniona na: " << zmiana_narty(x, 1) << endl;
+		zmiana_narty(x);
+		cout << "cena zmieniona na: " << x << endl;
 		break;
 	}
 	case(2):
@@ -253,6 +470,7 @@ inline void Cennik::zmiana_cennika()
 }
 
 inline void Cennik::cennik_widok() {
+	cout << string(50, '\n');
 	int x;
 	cout << "wyjscie [0]" << endl << "wyswietl cennik [1] " << endl << "zmiana cennika [2] " << endl;
 

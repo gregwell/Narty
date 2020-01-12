@@ -1,6 +1,7 @@
 ﻿#include "pch.h"
 #include "header.h"
 
+
 inline void Pracownik::Login()
 {
 	while (1)
