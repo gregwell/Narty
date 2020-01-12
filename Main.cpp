@@ -1,5 +1,7 @@
 ﻿#include "pch.h"
 #include "source.cpp"
+#include "cennik.cpp"
+#include "header.h"
 
 int main()
 {
@@ -34,7 +36,7 @@ int main()
 		}
 		case(5):
 		{
-			cennik();
+			cennik_widok();
 			break;
 		}
 		}

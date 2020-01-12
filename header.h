@@ -101,7 +101,7 @@ private:
 	int odbarczanie_punktowe;
 	
 public:
-	void cennik();
+	Cennik();
 	//void platnosc();
 	void zmiana_cennika();
 	void zmiana_narty(int p);
@@ -117,6 +117,6 @@ public:
 	void zmiana_wygrzewanie(int p);
 	void zmiana_odbarczanie(int p);
 	void wyswietl_ceny();
-	void cennik();
+	void cennik_widok();
 	;
 };

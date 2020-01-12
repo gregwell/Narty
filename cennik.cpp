@@ -236,7 +236,7 @@ void Cennik::zmiana_cennika()
 	}
 }
 
-void Cennik::cennik() {
+void Cennik::cennik_widok() {
 	int x;
 	cout << "wyjscie [0]" << endl << "wyswietl cennik [1] " << endl << "zmiana cennika [2] " << endl;
 
@@ -262,9 +262,17 @@ void Cennik::cennik() {
 
 };
 
-void Cennik::cennik() {
-
-
-
-
+Cennik::Cennik() {
+	 narty=30;
+	 snowboard=30;
+	 buty=20;
+	 kije=15;
+	 kask=15;
+	 zestaw_narciarski=50;
+	 zestaw_snowboard=50;
+	 smarowanie=20;
+	 ostrzenie=25;
+	 pelny_serwis=100;
+	 wygrzewanie_butow=150;
+	 odbarczanie_punktowe=60;
 }
