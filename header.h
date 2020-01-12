@@ -115,5 +115,6 @@ public:
 	void zmiana_pelny(int p);
 	void zmiana_wygrzewanie(int p);
 	void zmiana_odbarczanie(int p);
+	void wyswietl_ceny();
 	;
 };
