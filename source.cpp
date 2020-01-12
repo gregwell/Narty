@@ -223,7 +223,7 @@ inline void Klient::rejestracja()
 	file.close();
 }
 
-void Cennik::wyswietl_ceny(narty, snowboard, buty, kije, kask, zestaw_narciarski, zestaw_snowboard, smarowanie, ostrzenie, pelny_serwis, wygrzewanie_butow, odbarczanie_punktowe)
+void Cennik::wyswietl_ceny()
 {
 	int x;
 	cout << "Wybierz cennik: " << endl;
@@ -257,6 +257,14 @@ void Cennik::wyswietl_ceny(narty, snowboard, buty, kije, kask, zestaw_narciarski
 	}
 }
 
+void Cennik::zmiana_narty(int p)
+{
+	narty = p;
+
+}
+
+
+
 void Cennik::zmiana_cennika()
 {
 	int x, y;
@@ -275,7 +283,7 @@ void Cennik::zmiana_cennika()
 		int x;
 		cout << "wprowadz cene: " << endl;
 		cin >> x;
-		void Cennik::zmiana_narty(x)
+		zmiana_narty(x)
 		{
 			narty = x;
 
