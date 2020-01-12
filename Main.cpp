@@ -10,6 +10,7 @@ int main()
 	Pracownik p;
 	Wypozyczalnia rez;
 	Klient reg;
+	Cennik cena;
 
 	p.Login();			
 
@@ -35,7 +36,7 @@ int main()
 		}
 		case(5):
 		{
-			//cennik_widok();
+			cena.cennik_widok();
 			break;
 		}
 		}
