@@ -55,7 +55,6 @@ inline void Wypozyczalnia::dodaj_rezerwacje()
 				}
 			}
 		}
-
 		cout << "Wprowadzono nieprawidłowa date\n";
 	}
 
@@ -137,10 +136,54 @@ inline int wybierz_usluge()
 		return x;
 }
 
-/*inline int Rejestracja::rejestracja()
+inline int Klient::rejestracja()
 {
-	cout << 
-}*/
+	Klient k;
+
+	cout << "Prosze podac swoje dane osobowe:\n";
+	cout << "Imie: ";
+	cin >> k.imie;
+	cout << "Nazwisko: ";
+	cin >> k.nazwisko;
+
+	while (1)
+	{
+		cout << "Data urodzenia:\n";
+		cout << "Dzien: ";
+		cin >> k.dzien;
+		cout << "Miesiac: ";
+		cin >> k.miesiac;
+		cout << "Rok: ";
+
+		if (k.dzien >= 1 && k.miesiac >= 1)
+		{
+			if (k.dzien == 31)
+			{
+				if (k.miesiac == 1 || k.miesiac == 3 || k.miesiac == 5 || k.miesiac == 7 || k.miesiac == 8 || k.miesiac == 10 || k.miesiac == 12)
+					break;
+			}
+
+			else if (k.dzien <= 30 && k.dzien > 28)
+			{
+				if (k.miesiac == 1 || (k.miesiac >= 3 && k.miesiac <= 12))
+					break;
+			}
+
+			else if (k.dzien == 28)
+			{
+				if (k.miesiac >= 1 && k.miesiac <= 12)
+						break;
+			}
+
+			else if (k.dzien >= 1 && k.dzien <= 27)
+			{
+				if (k.miesiac >= 1 && k.miesiac <= 12)
+					break;
+			}
+		}
+		cout << "Wprowadzono nieprawidłowa date\n";
+	}
+}
 
 inline void cennik()
 {

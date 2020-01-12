@@ -4,11 +4,14 @@
 
 using namespace std;
 
-struct Data
+class Data
 {
+public:
 	int dzien;
 	int miesiac;
 	int rok;
+
+	int k();
 };
 
 class Wypozyczalnia : public Data
@@ -45,12 +48,8 @@ class Klient : public Data
 private:
 	string imie;
 	string nazwisko;
-};
 
-class Rejestracja
-{
 public:
-	friend class Klient;
 	int rejestracja();
 };
 
