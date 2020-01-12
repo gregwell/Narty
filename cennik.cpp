@@ -9,8 +9,14 @@ inline void Cennik::wyswietl_ceny()
 	cout << "Wybierz cennik: " << endl;
 	cout << "Serwis [1]			Wypozyczalnia sprzetu [2]" << endl;
 	cin >> x;
+
+	fstream cennik;
+	cennik.open("cennik.txt", ios::in);
+
+
 	if (x == 2)
 	{
+
 		cout << "Cena za wypozyczenie sprzetu: " << endl << endl;
 		cout << "Narty			" << narty << endl;
 		cout << "Snowboard		" << snowboard << endl;
@@ -37,8 +43,15 @@ inline void Cennik::wyswietl_ceny()
 	}
 }
 
-inline void Cennik::zmiana_narty(int p)
+inline void Cennik::zmiana_narty(int p, int h)
 {
+	fstream cennik;
+	cennik.open("cennik.txt", ios::out);
+	cennik.write(p, h);
+	}
+	
+
+
 	narty = p;
 
 }
@@ -116,6 +129,10 @@ inline void Cennik::zmiana_cennika()
 	cout << "Wybierz produkt, ktorego cene chcesz zmienic: " << endl;
 	cout << "wyjscie [0]" << endl << "narty [1]" << endl << "snowboard [2]" << endl << "buty [3]" << endl << "kije [4]" << endl << "kask [5]" << endl << "zestaw_narciarski [6]" << endl << "zestaw_snowboard [7]" << endl << "smarowanie [8]" << endl << "ostrzenie [9]" << endl << "pelny serwis [10]" << endl << "wygrzewanie butow [11]" << endl << "odbarczanie punktowe [12]" << endl;
 	cin >> x;
+
+	fstream cennik;
+	cennik.open("cennik.txt", ios::out);
+
 
 	switch (x)
 	{
