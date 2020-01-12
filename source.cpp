@@ -183,6 +183,9 @@ inline int Klient::rejestracja()
 		}
 		cout << "Wprowadzono nieprawidłowa date\n";
 	}
+
+	cout << "Pomyslnie zarejestrowano!\n";
+
 }
 
 inline void cennik()
