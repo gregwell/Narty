@@ -1,6 +1,8 @@
 ﻿#include "pch.h"
 #include "source.cpp"
 #include "cennik.cpp"
+#include "Rezerwacja.cpp"
+#include "Wypozyczenie.cpp"
 
 int main()
 {

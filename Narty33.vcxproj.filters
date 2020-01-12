@@ -38,5 +38,11 @@
     <ClCompile Include="lekcja.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Wypozyczenie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rezerwacja.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

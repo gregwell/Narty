@@ -1,6 +1,7 @@
 #include "header.h"
+#include "pch.h"
 
-int Lekcja::wybierz_dzien()
-{
-
-}
+//int Lekcja::wybierz_dzien()
+//{
+//
+//}
