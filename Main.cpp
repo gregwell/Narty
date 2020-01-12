@@ -7,7 +7,8 @@ int main()
 	cout << "Witaj w programie Narty33 - najlepszej aplikacji do zarzadzania nartami na swiecie" << endl;
 
 	Pracownik p;
-	p.Login();
+	p.Login();			
+	Wypozyczalnia rez;
 
 	int menu = wybierz_usluge();
 
@@ -25,7 +26,6 @@ int main()
 		}
 		case(2):
 		{
-			Wypozyczalnia rez;
 			rez.dodaj_rezerwacje();
 			break;
 		}
