@@ -87,11 +87,33 @@ public:
 class Cennik
 {
 private:
-	int cena_dla_początkujących;
-	int cena_dla_zaawansowanych;
-	int cena_wypożyczenia;
-	int cena_naprawy;
-
+	int narty;
+	int snowboard;
+	int buty;
+	int kije;
+	int kask;
+	int zestaw_narciarski;
+	int zestaw_snowboard;
+	int smarowanie;
+	int ostrzenie;
+	int pelny_serwis;
+	int wygrzewanie_butow;
+	int odbarczanie_punktowe;
+	
 public:
 	void platnosc();
+	void zmiana_cennika();
+	void zmiana_narty(int p);
+	void zmiana_snowboard(int p);
+	void zmiana_buty(int p);
+	void zmiana_kije(int p);
+	void zmiana_kask(int p);
+	void zmiana_narciarski(int p);
+	void zmiana_snowboardowy(int p);
+	void zmiana_smarowanie(int p);
+	void zmiana_ostrzenie(int p);
+	void zmiana_pelny(int p);
+	void zmiana_wygrzewanie(int p);
+	void zmiana_odbarczanie(int p);
+	;
 };
