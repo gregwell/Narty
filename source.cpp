@@ -138,6 +138,8 @@ inline int wybierz_usluge()
 
 inline void Klient::rejestracja()
 {
+	fstream file;
+	file.open("Klienci.txt", ios::out | ios::app);
 	Klient k;
 
 	cout << "Prosze podac swoje dane osobowe:\n";
@@ -186,7 +188,7 @@ inline void Klient::rejestracja()
 	}
 
 	cout << "Pomyslnie zarejestrowano!\n";
-	cout << "Imie:\t" << k.imie << "\nNazwisko:\t" << k.nazwisko << endl;
+	cout << "Imie:" << k.imie << "\nNazwisko:" << k.nazwisko << endl;
 	cout << "Data urodzenia: ";
 
 	if (k.dzien < 10)
@@ -202,6 +204,23 @@ inline void Klient::rejestracja()
 		cout << "." << k.miesiac;
 
 	cout << "." << k.rok << endl;
+
+	file << k.imie << " " << k.nazwisko << endl << "Data urodzenia: ";
+
+	if (k.dzien < 10)
+		file << "0" << k.dzien;
+
+	else
+		file << k.dzien;
+
+	if (k.miesiac < 10)
+		file << ".0" << k.miesiac;
+
+	else
+		file << "." << k.miesiac;
+
+	file << "." << k.rok << endl;
+	file.close();
 }
 
 inline void cennik()
