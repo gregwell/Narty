@@ -4,10 +4,6 @@
 
 using namespace std;
 
-void funkcja();
-
-int wybierz_usluge();
-
 struct Data
 {
 	int dzien;
@@ -102,10 +98,4 @@ private:
 
 public:
 	void platnosc();
-};
-
-class TestK
-{
-public:
-	void testF();
 };
