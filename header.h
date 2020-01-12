@@ -13,16 +13,25 @@ public:
 	int rok;
 };
 
-class Wypozyczalnia : public Data
+class Rezerwacja : public Data
 {
 	friend class Klient;
 	friend class Uslugi;
 
 public:
 	void dodaj_rezerwacje();
-	int dodaj_wypozyczenie();
-	int zwroc_sprzet();
 };
+
+class Wypozyczenie : public Data
+{
+	friend class Klient;
+	friend class Uslugi;
+
+public:
+	void dodaj_wypozyczenie();
+};
+
+
 
 class Pracownik : private Data
 {
