@@ -127,7 +127,7 @@ inline int wybierz_usluge()
 	int x;
 	cin >> x;
 
-	if (x > 5 || x < 1)
+	if (x > 5 || x < 0)
 	{
 		cout << "Blad!!!\n\n";
 		wybierz_usluge();

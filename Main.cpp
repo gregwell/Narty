@@ -3,17 +3,18 @@
 
 int main()
 {
-	char x;
 	cout << "Witaj w programie Narty33 - najlepszej aplikacji do zarzadzania nartami na swiecie" << endl;
 
+	char x;
 	Pracownik p;
-	p.Login();			
-	
 	Wypozyczalnia rez;
+
+	p.Login();			
 
 	do
 	{	
 		int menu = wybierz_usluge();
+
 		switch (menu)
 		{
 		case(0):
