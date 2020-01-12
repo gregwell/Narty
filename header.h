@@ -123,7 +123,7 @@ Cennik()
 	odbarczanie_punktowe = 60;
 }
 	void zmiana_cennika();
-	void zmiana_narty(int p, int h);
+	int zmiana_narty(int p, int h);
 	void zmiana_snowboard(int p);
 	void zmiana_buty(int p);
 	void zmiana_kije(int p);

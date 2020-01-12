@@ -43,17 +43,16 @@ inline void Cennik::wyswietl_ceny()
 	}
 }
 
-inline void Cennik::zmiana_narty(int p, int h)
+inline int Cennik::zmiana_narty(int p, int h)
 {
+	int j=p;
+	int hh = h;
 	fstream cennik;
 	cennik.open("cennik.txt", ios::out);
-	cennik.write(p, h);
-	}
+	cennik.write((char*)&j, hh);
+	cennik.close();
 	
-
-
-	narty = p;
-
+	return j;
 }
 
 inline void Cennik::zmiana_snowboard(int p)
@@ -145,8 +144,8 @@ inline void Cennik::zmiana_cennika()
 		int x;
 		cout << "wprowadz cene: " << endl;
 		cin >> x;
-		zmiana_narty(x);
-		cout << "cena zmieniona na: " << narty << endl;
+		zmiana_narty(x, 1);
+		cout << "cena zmieniona na: " << zmiana_narty(x, 1) << endl;
 		break;
 	}
 	case(2):
