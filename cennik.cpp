@@ -231,7 +231,40 @@ void Cennik::zmiana_cennika()
 		cout << "cena zmieniona na: " << odbarczanie_punktowe << endl;
 		break;
 	}
-	
+	default:
+		break;
 	}
 }
 
+void Cennik::cennik() {
+	int x;
+	cout << "wyjscie [0]" << endl << "wyswietl cennik [1] " << endl << "zmiana cennika [2] " << endl;
+
+	cin >> x;
+
+	switch (x)
+	{
+	case(0): {
+			exit(0);
+	}
+	case(1): {
+			wyswietl_ceny();
+			break;
+		}
+	case(2): {
+		zmiana_cennika();
+		break;
+	}
+
+	default:
+		break;
+	}
+
+};
+
+void Cennik::cennik() {
+
+
+
+
+}
