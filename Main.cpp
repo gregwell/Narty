@@ -8,12 +8,12 @@ int main()
 
 	Pracownik p;
 	p.Login();			
+	
 	Wypozyczalnia rez;
-
-	int menu = wybierz_usluge();
 
 	do
 	{	
+		int menu = wybierz_usluge();
 		switch (menu)
 		{
 		case(0):
