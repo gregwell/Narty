@@ -73,7 +73,7 @@ void Cennik::zmiana_narciarski(int p)
 
 }
 
-void Cennik::zmiana_snowboard(int p)
+void Cennik::zmiana_snowboardowy(int p)
 {
 	zestaw_snowboard = p;
 
