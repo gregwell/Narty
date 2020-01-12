@@ -8,9 +8,9 @@ inline void Wypozyczalnia::dodaj_rezerwacje()
 	
 	while (1)
 	{
-		cout << "Wybierz dzień : ";
+		cout << "Wybierz dzien : ";
 		cin >> data.dzien;
-		cout << "Miesiąc: ";
+		cout << "Miesiac: ";
 		cin >> data.miesiac;
 		cout << "Rok: ";
 		cin >> data.rok;
@@ -89,18 +89,18 @@ inline void Pracownik::Login()
 	{
 		cout << "Podaj login : ";
 		cin >> userName;
-		cout << "Podaj hasło : ";
+		cout << "Podaj haslo : ";
 		cin >> userPass;
 
 		if (userName == "greg69" && userPass == "qwerty")
 		{
-			cout << "Witaj Grzegorz Studziński!\n";
+			cout << "Witaj Grzegorz Studzisski!\n";
 			break;
 		}
 
 		else if (userName == "janosik" && userPass == "maryna")
 		{
-			cout << "Witaj Michał Stawarski!\n";
+			cout << "Witaj Michal Stawarski!\n";
 			break;
 		}
 
