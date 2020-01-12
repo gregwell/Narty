@@ -37,7 +37,7 @@ int main()
 		}
 		}
 
-		cout << "Czy chcesz kontynować?\nTAK[q]\tNIE[dowolny przycisk]\n";
+		cout << "Czy chcesz kontynować?\nTAK[dowolny przycisk]\tNIE[q]\n";
 		cin >> x;
 	} while (x != 'q');
 
