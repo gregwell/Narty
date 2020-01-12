@@ -9,23 +9,36 @@ inline void Rezerwacja::dodaj_rezerwacje()
 	
 	Data data;
 	int h;
-	string temp_imie;
+	string temp_imie, temp_nazwisko, temp_merged;
 	int znalezione = 0;
 	string wyrazWpliku;
 
-	cout << "Prosze podac dane klienta:" << endl;
+	cout << "Prosze podac dane klienta dla ktorego chcesz dokonac rezerwacji:" << endl;
 	cout << "Klienci:" << endl;
 	ifstream file{ "Klienci.txt" };
 	cout << file.rdbuf();
 	cout << "\n" << endl;
 
+	fstream plik_rezerwacje;
+	plik_rezerwacje.open("Rezerwacje.txt", ios::out | ios::app);
+
+
 	do {
 
-		cout << "Podaj imie i nazwisko:";
+		cout << "Podaj imie: ";
 		cin >> temp_imie;
+		cout << "" << endl;
+
+		cout << "Podaj nazwisko: ";
+		cin >> temp_nazwisko;
+		cout << "" << endl;
+
+		temp_merged = temp_imie + "_" + temp_nazwisko;
 
 		ifstream fin;
 		fin.open("Klienci.txt");
+
+
 
 		if (!fin.is_open()) {
 			cout << "nie ma takiego pliku";
@@ -35,15 +48,17 @@ inline void Rezerwacja::dodaj_rezerwacje()
 
 		while (fin.good()) { // dopuki dane sa OK i nie EOF
 			fin >> wyrazWpliku;
-			if (wyrazWpliku == temp_imie) znalezione++;
+			if (wyrazWpliku == temp_merged) znalezione++;
 		}
 		fin.close();
 
+		if (znalezione == 0) cout << "Podaj poprawne dane.." << endl;
+
 	} while (znalezione == 0);
 
-	cout << "ok poprawne mozemy isc dalej" << endl;
+	cout << "Znaleziono klienta. Wprowadz date rezerwacji" << endl;
 
-	/*while (1)
+	while (1)
 	{
 		cout << "Wybierz dzien : ";
 		cin >> data.dzien;
@@ -95,7 +110,9 @@ inline void Rezerwacja::dodaj_rezerwacje()
 		cout << "Wprowadzono nieprawidłowa date\n";
 	}
 
-	cout << endl << "Wprowadzono date rezerwacji:\n";
+	cout << endl << "Wprowadzoo rezerwacje:\n";
+
+	cout << "Pan(Pani): " + temp_imie + " " + temp_nazwisko << endl;
 
 	if (data.dzien < 10)
 		cout << "0" << data.dzien;
@@ -116,5 +133,7 @@ inline void Rezerwacja::dodaj_rezerwacje()
 		cout << "0" << h << ":00\n";
 
 	else
-		cout << h << ":00\n";*/
+		cout << h << ":00\n";
+
+	plik_rezerwacje << temp_imie << " " << temp_nazwisko << ", data: " << data.dzien << "." << data.miesiac << "." << data.rok << endl;
 }

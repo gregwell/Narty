@@ -1,10 +1,6 @@
-Michaˆ Wi˜niewski
-Data urodzenia: 23.04.1970
-Piotr Barˆos
-Data urodzenia: 01.01.1980
-grzegorz studzinowski
-Data urodzenia: 21.03.1998
-grzegirz studzinski
-Data urodzenia: 21.12.1994
-luj lujowy
-Data urodzenia: 12.12.2000
+adam_chak
+Data urodzenia: 21.04.1990
+tadeusz_bonk
+Data urodzenia: 11.11.2000
+mihal_stawarski
+Data urodzenia: 03.10.2001
