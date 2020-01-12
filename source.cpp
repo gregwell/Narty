@@ -1,6 +1,5 @@
 ﻿#include "pch.h"
 #include "header.h"
-#include "cennik.cpp"
 
 inline void Wypozyczalnia::dodaj_rezerwacje()
 {

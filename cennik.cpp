@@ -2,8 +2,8 @@
 #include "header.h"
 
 using namespace std;
-void Cennik::cennik_widok();
-void Cennik::wyswietl_ceny()
+
+inline void Cennik::wyswietl_ceny()
 {
 	int x;
 	cout << "Wybierz cennik: " << endl;
@@ -37,80 +37,80 @@ void Cennik::wyswietl_ceny()
 	}
 }
 
-void Cennik::zmiana_narty(int p)
+inline void Cennik::zmiana_narty(int p)
 {
 	narty = p;
 
 }
 
-void Cennik::zmiana_snowboard(int p)
+inline void Cennik::zmiana_snowboard(int p)
 {
 	snowboard = p;
 
 }
 
-void Cennik::zmiana_buty(int p)
+inline void Cennik::zmiana_buty(int p)
 {
 	buty = p;
 
 }
 
-void Cennik::zmiana_kije(int p)
+inline void Cennik::zmiana_kije(int p)
 {
 	kije = p;
 
 }
 
-void Cennik::zmiana_kask(int p)
+inline void Cennik::zmiana_kask(int p)
 {
 	kask = p;
 
 }
 
-void Cennik::zmiana_narciarski(int p)
+inline void Cennik::zmiana_narciarski(int p)
 {
 	zestaw_narciarski = p;
 
 }
 
-void Cennik::zmiana_snowboardowy(int p)
+inline void Cennik::zmiana_snowboardowy(int p)
 {
 	zestaw_snowboard = p;
 
 }
 
-void Cennik::zmiana_smarowanie(int p)
+inline void Cennik::zmiana_smarowanie(int p)
 {
 	smarowanie = p;
 
 }
 
-void Cennik::zmiana_ostrzenie(int p)
+inline void Cennik::zmiana_ostrzenie(int p)
 {
 	ostrzenie = p;
 
 }
 
-void Cennik::zmiana_pelny(int p)
+inline void Cennik::zmiana_pelny(int p)
 {
 	pelny_serwis = p;
 
 }
 
-void Cennik::zmiana_wygrzewanie(int p)
+inline void Cennik::zmiana_wygrzewanie(int p)
 {
 	wygrzewanie_butow = p;
 
 }
 
-void Cennik::zmiana_odbarczanie(int p)
+inline void Cennik::zmiana_odbarczanie(int p)
 {
 	odbarczanie_punktowe = p;
 
 }
 
 
-void Cennik::zmiana_cennika()
+inline void Cennik::zmiana_cennika()
 {
 	int x, y;
 	cout << "Wybierz produkt, ktorego cene chcesz zmienic: " << endl;
@@ -236,7 +236,7 @@ void Cennik::zmiana_cennika()
 	}
 }
 
-void Cennik::cennik_widok() {
+inline void Cennik::cennik_widok() {
 	int x;
 	cout << "wyjscie [0]" << endl << "wyswietl cennik [1] " << endl << "zmiana cennika [2] " << endl;
 
@@ -261,18 +261,3 @@ void Cennik::cennik_widok() {
 	}
 
 };
-
-Cennik::Cennik() {
-	 narty=30;
-	 snowboard=30;
-	 buty=20;
-	 kije=15;
-	 kask=15;
-	 zestaw_narciarski=50;
-	 zestaw_snowboard=50;
-	 smarowanie=20;
-	 ostrzenie=25;
-	 pelny_serwis=100;
-	 wygrzewanie_butow=150;
-	 odbarczanie_punktowe=60;
-}

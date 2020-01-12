@@ -101,8 +101,21 @@ private:
 	int odbarczanie_punktowe;
 	
 public:
-	Cennik();
-	//void platnosc();
+Cennik() 
+{
+	narty = 30;
+	snowboard = 30;
+	buty = 20;
+	kije = 15;
+	kask = 15;
+	zestaw_narciarski = 50;
+	zestaw_snowboard = 50;
+	smarowanie = 20;
+	ostrzenie = 25;
+	pelny_serwis = 100;
+	wygrzewanie_butow = 150;
+	odbarczanie_punktowe = 60;
+	}
 	void zmiana_cennika();
 	void zmiana_narty(int p);
 	void zmiana_snowboard(int p);

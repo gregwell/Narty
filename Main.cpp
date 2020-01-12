@@ -1,7 +1,6 @@
 ﻿#include "pch.h"
 #include "source.cpp"
 #include "cennik.cpp"
-#include "header.h"
 
 int main()
 {
