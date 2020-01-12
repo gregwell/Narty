@@ -1,17 +1,17 @@
 ﻿#pragma once
 #include <iostream>
 #include <string>
-#include "pch.h"
-#include "stdafx.h"
-
 
 using namespace std;
 
-struct Data
+class Data
 {
+public:
 	int dzien;
 	int miesiac;
 	int rok;
+
+	int k();
 };
 
 class Wypozyczalnia : public Data
@@ -20,10 +20,9 @@ class Wypozyczalnia : public Data
 	friend class Uslugi;
 
 public:
-	inline void dodaj_rezerwacje();
-	inline int zarejestruj_klienta();
-	inline int dodaj_wypozyczenie();
-	inline int zwroc_sprzet();
+	void dodaj_rezerwacje();
+	int dodaj_wypozyczenie();
+	int zwroc_sprzet();
 };
 
 class Pracownik : private Data
@@ -33,7 +32,7 @@ private:
 	string userPass;
 
 public:
-	inline void Login();
+	void Login();
 };
 
 class Instruktor : private Data
@@ -44,19 +43,14 @@ private:
 	string kwalifikacje;
 };
 
-class Klient
+class Klient : public Data
 {
-	friend class Rejestracja;
-
 private:
 	string imie;
 	string nazwisko;
-};
 
-class Rejestracja
-{
 public:
-	inline void rejestracja();
+	int rejestracja();
 };
 
 class Zarzadzanie
@@ -64,8 +58,8 @@ class Zarzadzanie
 	friend class Pracownik;
 
 public:
-	inline void dodaj_sprzet();
-	inline void usun_sprzet();
+	void dodaj_sprzet();
+	void usun_sprzet();
 };
 
 class Sprzet
@@ -77,8 +71,8 @@ private:
 	int typ;
 
 public:
-	inline int wybor_typu_sprzetu();
-	inline int zwrot_sprzetu();
+	int wybor_typu_sprzetu();
+	int zwrot_sprzetu();
 };
 
 class Lekcja : private Data
@@ -87,8 +81,8 @@ private:
 	int czas;
 
 public:
-	inline int wybierz_dzien();
-	inline int wybierz_sprzet();
+	int wybierz_dzien();
+	int wybierz_sprzet();
 };
 
 class Cennik
@@ -100,7 +94,5 @@ private:
 	int cena_naprawy;
 
 public:
-	inline void platnosc();
+	void platnosc();
 };
-
-inline int wybierz_usluge();
