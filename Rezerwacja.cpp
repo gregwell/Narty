@@ -1,12 +1,49 @@
 ﻿#include "pch.h"
 #include "header.h"
+#include <fstream>
+
+using namespace std;
 
 inline void Rezerwacja::dodaj_rezerwacje()
 {
+	
 	Data data;
 	int h;
+	string temp_imie;
+	int znalezione = 0;
+	string wyrazWpliku;
 
-	while (1)
+	cout << "Prosze podac dane klienta:" << endl;
+	cout << "Klienci:" << endl;
+	ifstream file{ "Klienci.txt" };
+	cout << file.rdbuf();
+	cout << "\n" << endl;
+
+	do {
+
+		cout << "Podaj imie i nazwisko:";
+		cin >> temp_imie;
+
+		ifstream fin;
+		fin.open("Klienci.txt");
+
+		if (!fin.is_open()) {
+			cout << "nie ma takiego pliku";
+			exit(EXIT_FAILURE);
+		}
+
+
+		while (fin.good()) { // dopuki dane sa OK i nie EOF
+			fin >> wyrazWpliku;
+			if (wyrazWpliku == temp_imie) znalezione++;
+		}
+		fin.close();
+
+	} while (znalezione == 0);
+
+	cout << "ok poprawne mozemy isc dalej" << endl;
+
+	/*while (1)
 	{
 		cout << "Wybierz dzien : ";
 		cin >> data.dzien;
@@ -79,5 +116,5 @@ inline void Rezerwacja::dodaj_rezerwacje()
 		cout << "0" << h << ":00\n";
 
 	else
-		cout << h << ":00\n";
+		cout << h << ":00\n";*/
 }

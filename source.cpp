@@ -10,7 +10,7 @@ inline void Pracownik::Login()
 		cout << "Podaj haslo : ";
 		cin >> userPass;
 
-		if (userName == "greg69" && userPass == "qwerty")
+		if (userName == "x" && userPass == "d")
 		{
 			cout << "Witaj Grzegorz Studzisski!\n";
 			break;
@@ -124,7 +124,7 @@ inline void Klient::rejestracja()
 
 	cout << "." << k.rok << endl;
 
-	file << k.imie << " " << k.nazwisko << endl << "Data urodzenia: ";
+	file << k.imie << "_" << k.nazwisko << endl << "Data urodzenia: ";
 
 	if (k.dzien < 10)
 		file << "0" << k.dzien;
