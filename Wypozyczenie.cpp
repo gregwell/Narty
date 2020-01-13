@@ -56,9 +56,11 @@ inline void Wypozyczenie::dodaj_wypozyczenie()
 			}
 		}
 		cout << "Wprowadzono nieprawidłowa date\n";
+		system("cls");
 	}
 
-	cout << endl << "Wprowadzono date rezerwacji:\n";
+	system("cls");
+	cout << endl << "Wprowadzono date wypozyczenia:\n";
 
 	if (data.dzien < 10)
 		cout << "0" << data.dzien;

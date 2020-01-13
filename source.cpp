@@ -25,6 +25,7 @@ inline void Pracownik::Login()
 
 		else if (userName == "strazak" && userPass == "pozar")
 		{
+			system("cls");
 			cout << "Witaj Jakub Strazak!\n";
 			break;
 		}
@@ -38,16 +39,18 @@ inline int wybierz_usluge()
 	cout << "Menu:\n";
 	cout << "1. Rejestracja\n";
 	cout << "2. Rezerwacja\n";
-	cout << "3. Wypożyczenie\n";
-	cout << "4. Zarządzanie sprzętem\n";
+	cout << "3. Wypozyczenie\n";
+	cout << "4. Zarządzanie sprzetem\n";
 	cout << "5. Cennik\n";
+	cout << "6. Lekcje jazdy\n";
 	cout << "0. Wyjscie z programu\n";
 
 	int x;
 	cin >> x;
 
-	if (x > 5 || x < 0)
+	if (x > 6 || x < 0)
 	{
+		system("cls");
 		cout << "Blad!!!\n\n";
 		wybierz_usluge();
 	}
@@ -104,9 +107,11 @@ inline void Klient::rejestracja()
 					break;
 			}
 		}
+		system("cls");
 		cout << "Wprowadzono nieprawidłowa date\n";
 	}
 
+	system("cls");
 	cout << "Pomyslnie zarejestrowano!\n";
 	cout << "Imie:" << k.imie << "\nNazwisko:" << k.nazwisko << endl;
 	cout << "Data urodzenia: ";

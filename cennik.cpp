@@ -1,7 +1,5 @@
 #include "pch.h"
 #include "header.h"
-#include <fstream>
-using namespace std;
 
 inline void Cennik::wyswietl_ceny()
 {
@@ -470,11 +468,11 @@ inline void Cennik::zmiana_cennika()
 }
 
 inline void Cennik::cennik_widok() {
-	cout << string(50, '\n');
 	int x;
-	cout << "wyjscie [0]" << endl << "wyswietl cennik [1] " << endl << "zmiana cennika [2] " << endl;
+	cout << "wyswietl cennik [1]\nzmiana cennika [2]\nwyjscie [0]\n";
 
 	cin >> x;
+	system("cls");
 
 	switch (x)
 	{

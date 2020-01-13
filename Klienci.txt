@@ -4,3 +4,7 @@ tadeusz_bonk
 Data urodzenia: 11.11.2000
 mihal_stawarski
 Data urodzenia: 03.10.2001
+Michal_Wisniewski
+Data urodzenia: 31.12.1960
+Zbigniew_Kaszub
+Data urodzenia: 01.01.1980

@@ -4,7 +4,6 @@
 #include <fstream>
 #include <cstdlib>
 #include <stdlib.h>
-#include <cstdlib>
 
 using namespace std;
 
@@ -79,7 +78,7 @@ class Sprzet
 	friend class Lekcja;
 
 private:
-	int typ;
+	string typ;
 
 public:
 	int wybor_typu_sprzetu();
@@ -89,8 +88,7 @@ public:
 class Lekcja : private Data
 {
 public:
-	int wybierz_dzien();
-	int wybierz_sprzet();
+	void lekcja();
 };
 
 class Cennik

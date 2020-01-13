@@ -3,6 +3,7 @@
 #include "cennik.cpp"
 #include "Rezerwacja.cpp"
 #include "Wypozyczenie.cpp"
+#include "lekcja.cpp"
 
 int main()
 {
@@ -13,6 +14,7 @@ int main()
 	Rezerwacja rez;
 	Klient reg;
 	Cennik cena;
+	Lekcja inst;
 
 	p.Login();			
 
@@ -28,23 +30,32 @@ int main()
 		}
 		case(1):
 		{
+			system("cls");
 			reg.rejestracja();
 			break;
 		}
 		case(2):
 		{
+			system("cls");
 			rez.dodaj_rezerwacje();
 			break;
 		}
 		case(5):
 		{
+			system("cls");
 			cena.cennik_widok();
 			break;
 		}
+		case(6):
+		{
+			system("cls");
+			inst.lekcja();
+			break;
 		}
-
+		}
 		cout << "Czy chcesz kontynować?\nTAK[dowolny przycisk]\tNIE[q]\n";
 		cin >> x;
+		system("cls");
 	} while (x != 'q');
 
 	return 0;

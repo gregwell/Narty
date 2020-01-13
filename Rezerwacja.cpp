@@ -1,12 +1,8 @@
 ﻿#include "pch.h"
 #include "header.h"
-#include <fstream>
-
-using namespace std;
 
 inline void Rezerwacja::dodaj_rezerwacje()
 {
-	
 	Data data;
 	int h;
 	string temp_imie, temp_nazwisko, temp_merged;
@@ -46,7 +42,7 @@ inline void Rezerwacja::dodaj_rezerwacje()
 		}
 
 
-		while (fin.good()) { // dopuki dane sa OK i nie EOF
+		while (fin.good()) { // dopóki dane sa OK i nie EOF
 			fin >> wyrazWpliku;
 			if (wyrazWpliku == temp_merged) znalezione++;
 		}
@@ -108,11 +104,13 @@ inline void Rezerwacja::dodaj_rezerwacje()
 			}
 		}
 		cout << "Wprowadzono nieprawidłowa date\n";
+		system("cls");
 	}
 
+	system("cls");
 	cout << endl << "Wprowadzoo rezerwacje:\n";
 
-	cout << "Pan(Pani): " + temp_imie + " " + temp_nazwisko << endl;
+	cout << "Pan/Pani: " + temp_imie + " " + temp_nazwisko << endl;
 
 	if (data.dzien < 10)
 		cout << "0" << data.dzien;
