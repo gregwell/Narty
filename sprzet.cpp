@@ -80,8 +80,11 @@ inline void Zarzadzanie::dodaj_sprzet()
 	}
 
 	cout << "Zapisano nowy sprzet w bazie danych:\n";
-	cout << sprzet.typ << "\t\tStan: " << sprzet.stan << endl;
+	cout << sprzet.typ << "  Stan: " << sprzet.stan << endl;
 	cout << "ID: " << ID << endl;
+
+	file << sprzet.typ << "\t\tStan: " << sprzet.stan << endl << "ID: " << ID << endl;
+	file.close();
 }
 
 
@@ -99,16 +102,14 @@ inline void zarzadzanie_sprzetem()
 		if (x == 1)
 		{
 			sprzet.dodaj_sprzet();
-			system("cls");
 			break;
 		}
 
-		else if (x == 2)
+		/*else if (x == 2)
 		{
 			sprzet.usun_sprzet();
-			system("cls");
 			break;
-		}
+		}*/
 
 		system("cls");
 		cout << "Blad!\n\n";

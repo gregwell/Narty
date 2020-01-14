@@ -5,6 +5,7 @@
 #include "Rezerwacja.cpp"
 #include "Wypozyczenie.cpp"
 #include "lekcja.cpp"
+#include "sprzet.cpp"
 
 int main()
 {
@@ -46,6 +47,12 @@ int main()
 		{
 			system("cls");
 			wyp.dodaj_wypozyczenie();
+			break;
+		}
+		case(4):
+		{
+			system("cls");
+			zarzadzanie_sprzetem();
 			break;
 		}
 		case(5):

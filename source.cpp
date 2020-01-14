@@ -36,13 +36,13 @@ inline void Pracownik::Login()
 inline int wybierz_usluge()
 {
 	cout << "Menu:\n";
-	cout << "1. Rejestracja\n";
-	cout << "2. Rezerwacja\n";
-	cout << "3. Wypozyczenie\n";
-	cout << "4. Zarzadzanie sprzetem\n";
-	cout << "5. Cennik\n";
-	cout << "6. Lekcje jazdy\n";
-	cout << "0. Wyjscie z programu\n";
+	cout << "[1] Rejestracja\n";
+	cout << "[2] Rezerwacja\n";
+	cout << "[3] Wypozyczenie\n";
+	cout << "[4] Zarzadzanie sprzetem\n";
+	cout << "[5] Cennik\n";
+	cout << "[6] Lekcje jazdy\n";
+	cout << "[0] Wyjscie z programu\n";
 
 	int x;
 	cin >> x;
