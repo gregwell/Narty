@@ -110,8 +110,7 @@ inline void Lekcja::lekcja()
 	char x;
 	Sprzet sprzet;
 
-	do
-	{
+
 		cout << "Prosze wybrac sprzet:\n";
 		cout << "[1] Narty\n[2] Snowboard\n";
 
@@ -134,7 +133,7 @@ inline void Lekcja::lekcja()
 			system("cls");
 		}
 		}
-	} while (x == '1' || x == '2');
+
 
 	system("cls");
 	cout << endl << "Wprowadzoo rezerwacje:\n";
@@ -162,7 +161,7 @@ inline void Lekcja::lekcja()
 	else
 		cout << h << ":00\n";
 
-	cout << "Sprzet: " << sprzet.typ;
+	cout << "Sprzet: " << sprzet.typ << endl;
 
 	plik_rezerwacje << temp_imie << " " << temp_nazwisko << ", data: " << data.dzien << "." << data.miesiac << "." << data.rok << "; Sprzet: " << sprzet.typ << endl;
 }
