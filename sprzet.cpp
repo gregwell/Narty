@@ -87,7 +87,7 @@ inline void Zarzadzanie::dodaj_sprzet()
 	file.close();
 }
 
-bool Zarzadzanie::zgodneID(long ID)
+inline bool Zarzadzanie::zgodneID(long ID)
 {
 	fstream wszystkie;
 	wszystkie.open("wszystkie.txt", ios::in);
