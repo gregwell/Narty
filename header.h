@@ -66,7 +66,7 @@ class Zarzadzanie
 
 public:
 	void dodaj_sprzet();
-	void usun_sprzet();
+	void widok();
 };
 
 class Sprzet

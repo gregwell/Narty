@@ -29,7 +29,8 @@ inline void Pracownik::Login()
 			break;
 		}
 
-		cout << "Błąd w logowaniu\n";
+		system("cls");
+		cout << "Blad w logowaniu\n";
 	}
 }
 

@@ -65,6 +65,7 @@ inline void Zarzadzanie::dodaj_sprzet()
 		cout << "Blad!\n";
 	}
 
+	system("cls");
 	cout << "Wprowadz numer identyfikacyjny dodanego sprzetu(6-cyfrowy kod)\n";
 
 	while (1)
@@ -79,21 +80,48 @@ inline void Zarzadzanie::dodaj_sprzet()
 		cout << "Wprowadzono niepoprawny kod!\nWprowadz numer identyfikacyjny ponownie!(6-cyfrowy kod)\n";
 	}
 
+	system("cls");
 	cout << "Zapisano nowy sprzet w bazie danych:\n";
 	cout << sprzet.typ << "  Stan: " << sprzet.stan << endl;
 	cout << "ID: " << ID << endl;
 
-	file << sprzet.typ << "\tStan: " << sprzet.stan << endl << "ID: " << ID << endl;
+	file << sprzet.typ << "\nStan: " << sprzet.stan << "\nID: " << ID << endl;
 	file.close();
 }
 
+inline void Zarzadzanie::widok()
+{
+	ifstream file{ "Sprzet.txt" };
+	cout << file.rdbuf();
 
+	if (!file.is_open()) {
+		cout << "nie ma takiego pliku";
+		exit(EXIT_FAILURE);
+	}
+	cout << endl << endl << "Czy chcesz wyczyscic baze danych?\n";
+	cout << "[1] TAK\t\t[dowolny przycisk] NIE\n";
+
+	char x;
+	cin >> x;
+
+	file.close();
+
+	if (x == '1')
+	{
+		system("cls");
+		ofstream out;
+		out.open("Sprzet", ios::out | ios::trunc);
+		out.close();
+
+		cout << "Wyczysczono baze danych sprzetu!\n";
+	}
+}
 inline void zarzadzanie_sprzetem()
 {
 	Zarzadzanie sprzet;
 	int x;
 
-	cout << "[1] Dodaj sprzet do bazy danych\n[2]Usun sprzet z bazy danych\n";
+	cout << "[1] Dodaj sprzet do bazy danych\n[2] Przegladanie sprzetu z bazy danych\n";
 	
 	while(1)
 	{
@@ -101,15 +129,17 @@ inline void zarzadzanie_sprzetem()
 
 		if (x == 1)
 		{
+			system("cls");
 			sprzet.dodaj_sprzet();
 			break;
 		}
 
-		/*else if (x == 2)
+		else if (x == 2)
 		{
-			sprzet.usun_sprzet();
+			system("cls");
+			sprzet.widok();
 			break;
-		}*/
+		}
 
 		system("cls");
 		cout << "Blad!\n\n";

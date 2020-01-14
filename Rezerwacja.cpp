@@ -13,7 +13,7 @@ inline void Rezerwacja::dodaj_rezerwacje()
 	cout << "Klienci:" << endl;
 	ifstream file{ "Klienci.txt" };
 	cout << file.rdbuf();
-	cout << "\n" << endl;
+	cout << endl << endl;
 
 	fstream plik_rezerwacje;
 	plik_rezerwacje.open("Rezerwacje.txt", ios::out | ios::app);
