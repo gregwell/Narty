@@ -1,25 +1,6 @@
 #include "pch.h"
 #include "header.h"
 
-inline int fun_sprzet()
-{
-	cout << "Prosze wybrac sprzet:\n";
-	cout << "[1] Narty\n[2] Snowboard\n";
-
-	int x;
-	cin >> x;
-
-	if (x != 1 && x != 2)
-	{
-		system("cls");
-		cout << "Blad!!!\n\n";
-		fun_sprzet();
-	}
-
-	else
-		return x;
-}
-
 inline void Lekcja::lekcja()
 {
 	Data data;
@@ -130,7 +111,7 @@ inline void Lekcja::lekcja()
 
 	while(1)
 	{
-		int x = fun_sprzet();
+		int x = sprzet.fun_sprzet();
 
 		switch (x)
 		{
@@ -176,4 +157,5 @@ inline void Lekcja::lekcja()
 	cout << "Sprzet: " << sprzet.typ << endl;
 
 	plik_rezerwacje << temp_imie << " " << temp_nazwisko << ", data: " << data.dzien << "." << data.miesiac << "." << data.rok << "; Sprzet: " << sprzet.typ << endl;
+	plik_rezerwacje.close();
 }

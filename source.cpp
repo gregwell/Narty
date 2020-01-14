@@ -12,7 +12,7 @@ inline void Pracownik::Login()
 
 		if (userName == "x" && userPass == "d")
 		{
-			cout << "Witaj Grzegorz Studzisski!\n";
+			cout << "Witaj Grzegorz Studzinski!\n";
 			break;
 		}
 
@@ -39,7 +39,7 @@ inline int wybierz_usluge()
 	cout << "1. Rejestracja\n";
 	cout << "2. Rezerwacja\n";
 	cout << "3. Wypozyczenie\n";
-	cout << "4. Zarządzanie sprzetem\n";
+	cout << "4. Zarzadzanie sprzetem\n";
 	cout << "5. Cennik\n";
 	cout << "6. Lekcje jazdy\n";
 	cout << "0. Wyjscie z programu\n";

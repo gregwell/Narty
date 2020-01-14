@@ -5,3 +5,5 @@ jan nowakowski, data: 20.2.2020; Sprzet:
 jan nowakowski, data: 1.1.2020; Sprzet: 
 jan nowakowski, data: 1.1.2020; Sprzet: 
 jan nowakowski, data: 13.1.2020; Sprzet: Snowboard
+Zbigniew Kaszub, data: 5.1.2020; Sprzet: Narty
+Michal Wisniewski, data: 23.1.2020; Sprzet: Narty

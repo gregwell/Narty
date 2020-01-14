@@ -34,8 +34,6 @@ inline void Rezerwacja::dodaj_rezerwacje()
 		ifstream fin;
 		fin.open("Klienci.txt");
 
-
-
 		if (!fin.is_open()) {
 			cout << "nie ma takiego pliku";
 			exit(EXIT_FAILURE);
@@ -134,4 +132,5 @@ inline void Rezerwacja::dodaj_rezerwacje()
 		cout << h << ":00\n";
 
 	plik_rezerwacje << temp_imie << " " << temp_nazwisko << ", data: " << data.dzien << "." << data.miesiac << "." << data.rok << endl;
+	plik_rezerwacje.close();
 }

@@ -61,11 +61,10 @@ int main()
 			break;
 		}
 		}
-		cout << "Czy chcesz kontynować?\nTAK[dowolny przycisk]\tNIE[q]\n";
+		cout << "Czy chcesz kontynowac?\nTAK[dowolny przycisk]\tNIE[q]\n";
 		cin >> x;
 		system("cls");
 	} while (x != 'q');
 
 	return 0;
 }
-

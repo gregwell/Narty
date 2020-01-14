@@ -7,9 +7,8 @@
 
 using namespace std;
 
-class Data
+struct Data
 {
-public:
 	int dzien;
 	int miesiac;
 	int rok;
@@ -77,10 +76,27 @@ class Sprzet
 
 private:
 	string typ;
+	string stan;
 
 public:
-	int wybor_typu_sprzetu();
-	int zwrot_sprzetu();
+	inline int fun_sprzet()
+	{
+		cout << "Prosze wybrac sprzet:\n";
+		cout << "[1] Narty\n[2] Snowboard\n";
+
+		int x;
+		cin >> x;
+
+		if (x != 1 && x != 2)
+		{
+			system("cls");
+			cout << "Blad!!!\n";
+			fun_sprzet();
+		}
+
+		else
+			return x;
+	}
 };
 
 class Lekcja : private Data
