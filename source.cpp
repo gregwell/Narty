@@ -58,3 +58,4 @@ inline int wybierz_usluge()
 	else
 		return x;
 }
+

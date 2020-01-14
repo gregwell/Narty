@@ -3,15 +3,16 @@
 
 inline void Zarzadzanie::dodaj_sprzet()
 {
-	fstream file;
-	file.open("Sprzet.txt", ios::out | ios::app);
+
+	cout << "Witaj w managerze sprzetu" << endl;
+	cout << "Wybierz sprzet" << endl;
+	
 
 	Sprzet sprzet;
-	long int ID;
 
 	while (1)
 	{
-		int x = sprzet.fun_sprzet();
+		int x = sprzet.fun_sprzet(); // wybieranie sprzetu
 
 		switch (x)
 		{
@@ -25,45 +26,40 @@ inline void Zarzadzanie::dodaj_sprzet()
 			sprzet.typ = "Snowboard";
 			break;
 		}
+		case(3):
+		{
+			sprzet.typ = "Buty";
+			break;
+		}
+		case(4):
+		{
+			sprzet.typ = "Kije";
+			break;
+		}
+		case(5):
+		{
+			sprzet.typ = "Kask";
+			break;
+		}
 		}break;
 	}
 
-	system("cls");
-	
-	while (1)
-	{
-		int x;
-		cout << "Podaj stan sprzetu:\n";
-		cout << "[1] Swietny\n[2] Dobry\n[3] Sredni\n[4] Dostateczny\n";
-		cin >> x;
+	cout << "Podaj rozmiar/dlugosc" << endl;
+	string rozmiar_sprzetu;
+	cin >> rozmiar_sprzetu;
 
-		if (x == 1)
-		{
-			sprzet.stan = "Swietny";
-			break;
-		}
-		
-		else if (x == 2)
-		{
-			sprzet.stan = "Dobry";
-			break;
-		}
+	string nazwa_pliku;
+	nazwa_pliku = + "sprzet/" + sprzet.typ + rozmiar_sprzetu + ".txt";
 
-		else if (x == 3)
-		{
-			sprzet.stan = "Sredni";
-			break;
-		}
 
-		else if (x == 4)
-		{
-			sprzet.stan = "Dostateczny";
-			break;
-		}
+	fstream file;
+	file.open(nazwa_pliku, ios::out | ios::app);
 
-		system("cls");
-		cout << "Blad!\n";
-	}
+	fstream wszystkie;
+	wszystkie.open("wszystkie.txt", ios::out | ios::app);
+
+	long int ID;
+
 
 	system("cls");
 	cout << "Wprowadz numer identyfikacyjny dodanego sprzetu(6-cyfrowy kod)\n";
@@ -73,21 +69,44 @@ inline void Zarzadzanie::dodaj_sprzet()
 		cout << "\nID: ";
 		cin >> ID;
 
-		if (ID <= 999999 && ID >= 100000)
+		if (ID <= 999999 && ID >= 100000 && zgodneID(ID)==false)
 			break;
 
 		system("cls");
 		cout << "Wprowadzono niepoprawny kod!\nWprowadz numer identyfikacyjny ponownie!(6-cyfrowy kod)\n";
 	}
 
+
+
 	system("cls");
 	cout << "Zapisano nowy sprzet w bazie danych:\n";
-	cout << sprzet.typ << "  Stan: " << sprzet.stan << endl;
 	cout << "ID: " << ID << endl;
 
-	file << sprzet.typ << "\nStan: " << sprzet.stan << "\nID: " << ID << endl;
+	file << ID << endl;
+
 	file.close();
 }
+
+bool Zarzadzanie::zgodneID(long ID)
+{
+	fstream wszystkie;
+	wszystkie.open("wszystkie.txt", ios::in);
+	string temp;
+	long x;
+	for (int x = 1; x <= wszystkie.eof(); x++) {
+		getline(wszystkie, temp);
+
+		x = atoi(temp.c_str());
+
+		if (ID == x) {
+			cout << "error";
+			return false;
+		}
+
+	}
+	return true;
+}
+
 
 inline void Zarzadzanie::widok()
 {

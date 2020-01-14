@@ -19,6 +19,8 @@ int main()
 	Cennik cena;
 	Lekcja inst;
 
+
+
 	p.Login();			
 
 	do

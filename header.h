@@ -67,6 +67,7 @@ class Zarzadzanie
 public:
 	void dodaj_sprzet();
 	void widok();
+	bool zgodneID(long temp);
 };
 
 class Sprzet
@@ -81,16 +82,20 @@ private:
 public:
 	inline int fun_sprzet()
 	{
-		cout << "Prosze wybrac sprzet:\n";
-		cout << "[1] Narty\n[2] Snowboard\n";
+		cout << "Menu:\n";
+		cout << "[1] Narty\n";
+		cout << "[2] Snowboard\n";
+		cout << "[3] Buty\n";
+		cout << "[4] Kije\n";
+		cout << "[5] Kask\n";
 
 		int x;
 		cin >> x;
 
-		if (x != 1 && x != 2)
+		if (x > 5 || x < 0)
 		{
 			system("cls");
-			cout << "Blad!!!\n";
+			cout << "Blad!!!\n\n";
 			fun_sprzet();
 		}
 
@@ -98,6 +103,11 @@ public:
 			return x;
 	}
 };
+
+//class Zestaw : private Sprzet
+//{
+//	int 
+//};
 
 class Lekcja : private Data
 {

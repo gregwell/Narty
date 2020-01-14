@@ -12,3 +12,5 @@ jan_nowakowski
 Data urodzenia: 21.03.1995
 Adam_Janosik
 Data urodzenia: 31.05.1996
+Michal_Wisniewski
+Data urodzenia: 21.03.2002

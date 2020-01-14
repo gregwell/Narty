@@ -31,6 +31,8 @@ inline void Rezerwacja::dodaj_rezerwacje()
 
 		temp_merged = temp_imie + "_" + temp_nazwisko;
 
+
+
 		ifstream fin;
 		fin.open("Klienci.txt");
 
