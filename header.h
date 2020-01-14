@@ -33,8 +33,6 @@ public:
 	void dodaj_wypozyczenie();
 };
 
-
-
 class Pracownik : private Data
 {
 private:

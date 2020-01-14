@@ -1,5 +1,6 @@
 ﻿#include "pch.h"
 #include "source.cpp"
+#include "rejestracja.cpp"
 #include "cennik.cpp"
 #include "Rezerwacja.cpp"
 #include "Wypozyczenie.cpp"
@@ -13,6 +14,7 @@ int main()
 	Pracownik p;
 	Rezerwacja rez;
 	Klient reg;
+	Wypozyczenie wyp;
 	Cennik cena;
 	Lekcja inst;
 
@@ -38,6 +40,12 @@ int main()
 		{
 			system("cls");
 			rez.dodaj_rezerwacje();
+			break;
+		}
+		case(3):
+		{
+			system("cls");
+			wyp.dodaj_wypozyczenie();
 			break;
 		}
 		case(5):
