@@ -58,6 +58,11 @@ inline void Zarzadzanie::dodaj_sprzet()
 	fstream wszystkie;
 	wszystkie.open("wszystkie.txt", ios::out | ios::app);
 
+	//fstream naglowki;
+	//naglowki.open("naglowki.txt", ios::out | ios::app);
+	//naglowki << nazwa_pliku;
+
+
 	long int ID;
 
 
@@ -164,4 +169,20 @@ inline void zarzadzanie_sprzetem()
 		system("cls");
 		cout << "Blad!\n\n";
 	}
+}
+
+inline void usun_sprzet() {
+
+
+	int x;
+	cout << "wprowadz ID sprzetu do usuniecia: " << endl;
+	cin >> x;
+
+
+
+
+
+
+
+
 }
