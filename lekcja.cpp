@@ -56,13 +56,13 @@ inline void Lekcja::lekcja()
 	while (1)
 	{
 		cout << "Wybierz dzien : ";
-		cin >> data.dzien;
+		data.dzien = bug_fix();;
 		cout << "Miesiac: ";
-		cin >> data.miesiac;
+		data.miesiac = bug_fix();;
 		cout << "Rok: ";
-		cin >> data.rok;
+		data.rok = bug_fix();;
 		cout << "Godzina: ";
-		cin >> h;
+		h = bug_fix();;
 
 		if (data.dzien >= 1 && data.miesiac >= 1)
 		{

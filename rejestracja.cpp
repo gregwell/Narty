@@ -17,11 +17,11 @@ inline void Klient::rejestracja()
 	{
 		cout << "Data urodzenia:\n";
 		cout << "Dzien: ";
-		cin >> k.dzien;
+		k.dzien = bug_fix();
 		cout << "Miesiac: ";
-		cin >> k.miesiac;
+		k.miesiac = bug_fix();
 		cout << "Rok: ";
-		cin >> k.rok;
+		k.rok = bug_fix();
 
 		if (k.dzien >= 1 && k.miesiac >= 1)
 		{
