@@ -31,7 +31,7 @@ inline void Lekcja::lekcja()
 		temp_merged = temp_imie + "_" + temp_nazwisko;
 
 		ifstream fin;
-		fin.open("Lekcja.txt");
+		fin.open("Klienci.txt");
 
 
 

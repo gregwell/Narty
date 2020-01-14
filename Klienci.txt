@@ -8,3 +8,5 @@ Michal_Wisniewski
 Data urodzenia: 31.12.1960
 Zbigniew_Kaszub
 Data urodzenia: 01.01.1980
+jan_nowakowski
+Data urodzenia: 21.03.1995
