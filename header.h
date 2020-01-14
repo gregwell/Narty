@@ -42,14 +42,6 @@ public:
 	void Login();
 };
 
-class Instruktor : private Data
-{
-private:
-	string imie;
-	string nazwisko;
-	string kwalifikacje;
-};
-
 class Klient : public Data
 {
 private:
@@ -77,7 +69,6 @@ class Sprzet
 
 private:
 	string typ;
-	string stan;
 
 public:
 	inline int fun_sprzet()
@@ -103,11 +94,6 @@ public:
 			return x;
 	}
 };
-
-//class Zestaw : private Sprzet
-//{
-//	int 
-//};
 
 class Lekcja : private Data
 {
