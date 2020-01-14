@@ -1,22 +1,6 @@
 #include "pch.h"
 #include "header.h"
 
-inline int bug_fix()
-{
-	int x;
-
-	if (!(cin >> x))
-	{
-		cerr << "\nTo nie jest liczba!\n";
-		cin.clear();
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
-		bug_fix();
-	}
-
-	else
-		return x;
-}
-
 inline void Cennik::wyswietl_ceny()
 {
 	int x;
@@ -372,8 +356,8 @@ inline void Cennik::zmiana_cennika()
 	}
 	case(1):
 	{
-		int x;
 		cout << "wprowadz cene: " << endl;
+		int x;
 		x = bug_fix();
 		zmiana_narty(x);
 		cout << "cena zmieniona na: " << x << endl;
@@ -381,8 +365,8 @@ inline void Cennik::zmiana_cennika()
 	}
 	case(2):
 	{
-		int x;
 		cout << "wprowadz cene: " << endl;
+		int x;
 		x = bug_fix();
 		zmiana_snowboard(x);
 		cout << "cena zmieniona na: " << snowboard << endl;
@@ -390,8 +374,8 @@ inline void Cennik::zmiana_cennika()
 	}
 	case(3):
 	{
-		int x;
 		cout << "wprowadz cene: " << endl;
+		int x;
 		x = bug_fix();
 		zmiana_buty(x);
 		cout << "cena zmieniona na: " << buty << endl;
@@ -399,8 +383,8 @@ inline void Cennik::zmiana_cennika()
 	}
 	case(4):
 	{
-		int x;
 		cout << "wprowadz cene: " << endl;
+		int x;
 		x = bug_fix();
 		zmiana_kije(x);
 		cout << "cena zmieniona na: " << kije << endl;
@@ -408,8 +392,8 @@ inline void Cennik::zmiana_cennika()
 	}
 	case(5):
 	{
-		int x;
 		cout << "wprowadz cene: " << endl;
+		int x;
 		x = bug_fix();
 		zmiana_kask(x);
 		cout << "cena zmieniona na: " << kask << endl;
@@ -417,8 +401,8 @@ inline void Cennik::zmiana_cennika()
 	}
 	case(6):
 	{
-		int x;
 		cout << "wprowadz cene: " << endl;
+		int x;
 		x = bug_fix();
 		zmiana_narciarski(x);
 		cout << "cena zmieniona na: " << zestaw_narciarski << endl;
@@ -426,8 +410,8 @@ inline void Cennik::zmiana_cennika()
 	}
 	case(7):
 	{
-		int x;
 		cout << "wprowadz cene: " << endl;
+		int x;
 		x = bug_fix();
 		zmiana_snowboardowy(x);
 		cout << "cena zmieniona na: " << zestaw_snowboard << endl;
@@ -435,8 +419,8 @@ inline void Cennik::zmiana_cennika()
 	}
 	case(8):
 	{
-		int x;
 		cout << "wprowadz cene: " << endl;
+		int x;
 		x = bug_fix();
 		zmiana_smarowanie(x);
 		cout << "cena zmieniona na: " << smarowanie << endl;
@@ -444,8 +428,8 @@ inline void Cennik::zmiana_cennika()
 	}
 	case(9):
 	{
-		int x;
 		cout << "wprowadz cene: " << endl;
+		int x;
 		x = bug_fix();
 		zmiana_ostrzenie(x);
 		cout << "cena zmieniona na: " << ostrzenie << endl;
@@ -453,8 +437,8 @@ inline void Cennik::zmiana_cennika()
 	}
 	case(10):
 	{
-		int x;
 		cout << "wprowadz cene: " << endl;
+		int x;
 		x = bug_fix();
 		zmiana_pelny(x);
 		cout << "cena zmieniona na: " << pelny_serwis << endl;
@@ -462,8 +446,8 @@ inline void Cennik::zmiana_cennika()
 	}
 	case(11):
 	{
-		int x;
 		cout << "wprowadz cene: " << endl;
+		int x;
 		x = bug_fix();
 		zmiana_wygrzewanie(x);
 		cout << "cena zmieniona na: " << wygrzewanie_butow << endl;
@@ -471,8 +455,8 @@ inline void Cennik::zmiana_cennika()
 	}
 	case(12):
 	{
-		int x;
 		cout << "wprowadz cene: " << endl;
+		int x;
 		x = bug_fix();
 		zmiana_odbarczanie(x);
 		cout << "cena zmieniona na: " << odbarczanie_punktowe << endl;

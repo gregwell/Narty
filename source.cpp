@@ -46,7 +46,7 @@ inline int wybierz_usluge()
 	cout << "[0] Wyjscie z programu\n";
 
 	int x;
-	cin >> x;
+	x = bug_fix();
 
 	if (x > 6 || x < 0)
 	{

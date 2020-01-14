@@ -71,28 +71,7 @@ private:
 	string typ;
 
 public:
-	inline int fun_sprzet()
-	{
-		cout << "Menu:\n";
-		cout << "[1] Narty\n";
-		cout << "[2] Snowboard\n";
-		cout << "[3] Buty\n";
-		cout << "[4] Kije\n";
-		cout << "[5] Kask\n";
-
-		int x;
-		cin >> x;
-
-		if (x > 5 || x < 0)
-		{
-			system("cls");
-			cout << "Blad!!!\n\n";
-			fun_sprzet();
-		}
-
-		else
-			return x;
-	}
+	int fun_sprzet();
 };
 
 class Lekcja : private Data
@@ -205,3 +184,42 @@ Cennik()
 	void wyswietl_ceny();
 	void cennik_widok();
 };
+
+inline int bug_fix()
+{
+	int x;
+
+	if (!(cin >> x))
+	{
+		cerr << "\nTo nie jest liczba!\n";
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		bug_fix();
+	}
+
+	else
+		return x;
+}
+
+inline int Sprzet::fun_sprzet()
+{
+	cout << "Menu:\n";
+	cout << "[1] Narty\n";
+	cout << "[2] Snowboard\n";
+	cout << "[3] Buty\n";
+	cout << "[4] Kije\n";
+	cout << "[5] Kask\n";
+
+	int x;
+	x = bug_fix();
+
+	if (x > 5 || x < 0)
+	{
+		system("cls");
+		cout << "Blad!!!\n\n";
+		fun_sprzet();
+	}
+
+	else
+		return x;
+}
