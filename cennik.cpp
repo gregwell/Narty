@@ -1,6 +1,22 @@
 #include "pch.h"
 #include "header.h"
 
+inline int bug_fix()
+{
+	int x;
+
+	if (!(cin >> x))
+	{
+		cerr << "\nTo nie jest liczba!\n";
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		bug_fix();
+	}
+
+	else
+		return x;
+}
+
 inline void Cennik::wyswietl_ceny()
 {
 	int x;
@@ -338,7 +354,7 @@ inline void Cennik::zmiana_odbarczanie(int p)
 
 inline void Cennik::zmiana_cennika()
 {
-	cout << string(50, '\n');
+	system("cls");
 	int x, y;
 	cout << "Wybierz produkt, ktorego cene chcesz zmienic: " << endl;
 	cout << "wyjscie [0]" << endl << "narty [1]" << endl << "snowboard [2]" << endl << "buty [3]" << endl << "kije [4]" << endl << "kask [5]" << endl << "zestaw_narciarski [6]" << endl << "zestaw_snowboard [7]" << endl << "smarowanie [8]" << endl << "ostrzenie [9]" << endl << "pelny serwis [10]" << endl << "wygrzewanie butow [11]" << endl << "odbarczanie punktowe [12]" << endl;
@@ -358,7 +374,7 @@ inline void Cennik::zmiana_cennika()
 	{
 		int x;
 		cout << "wprowadz cene: " << endl;
-		cin >> x;
+		x = bug_fix();
 		zmiana_narty(x);
 		cout << "cena zmieniona na: " << x << endl;
 		break;
@@ -367,7 +383,7 @@ inline void Cennik::zmiana_cennika()
 	{
 		int x;
 		cout << "wprowadz cene: " << endl;
-		cin >> x;
+		x = bug_fix();
 		zmiana_snowboard(x);
 		cout << "cena zmieniona na: " << snowboard << endl;
 		break;
@@ -376,7 +392,7 @@ inline void Cennik::zmiana_cennika()
 	{
 		int x;
 		cout << "wprowadz cene: " << endl;
-		cin >> x;
+		x = bug_fix();
 		zmiana_buty(x);
 		cout << "cena zmieniona na: " << buty << endl;
 		break;
@@ -385,7 +401,7 @@ inline void Cennik::zmiana_cennika()
 	{
 		int x;
 		cout << "wprowadz cene: " << endl;
-		cin >> x;
+		x = bug_fix();
 		zmiana_kije(x);
 		cout << "cena zmieniona na: " << kije << endl;
 		break;
@@ -394,7 +410,7 @@ inline void Cennik::zmiana_cennika()
 	{
 		int x;
 		cout << "wprowadz cene: " << endl;
-		cin >> x;
+		x = bug_fix();
 		zmiana_kask(x);
 		cout << "cena zmieniona na: " << kask << endl;
 		break;
@@ -403,7 +419,7 @@ inline void Cennik::zmiana_cennika()
 	{
 		int x;
 		cout << "wprowadz cene: " << endl;
-		cin >> x;
+		x = bug_fix();
 		zmiana_narciarski(x);
 		cout << "cena zmieniona na: " << zestaw_narciarski << endl;
 		break;
@@ -412,7 +428,7 @@ inline void Cennik::zmiana_cennika()
 	{
 		int x;
 		cout << "wprowadz cene: " << endl;
-		cin >> x;
+		x = bug_fix();
 		zmiana_snowboardowy(x);
 		cout << "cena zmieniona na: " << zestaw_snowboard << endl;
 		break;
@@ -421,7 +437,7 @@ inline void Cennik::zmiana_cennika()
 	{
 		int x;
 		cout << "wprowadz cene: " << endl;
-		cin >> x;
+		x = bug_fix();
 		zmiana_smarowanie(x);
 		cout << "cena zmieniona na: " << smarowanie << endl;
 		break;
@@ -430,7 +446,7 @@ inline void Cennik::zmiana_cennika()
 	{
 		int x;
 		cout << "wprowadz cene: " << endl;
-		cin >> x;
+		x = bug_fix();
 		zmiana_ostrzenie(x);
 		cout << "cena zmieniona na: " << ostrzenie << endl;
 		break;
@@ -439,7 +455,7 @@ inline void Cennik::zmiana_cennika()
 	{
 		int x;
 		cout << "wprowadz cene: " << endl;
-		cin >> x;
+		x = bug_fix();
 		zmiana_pelny(x);
 		cout << "cena zmieniona na: " << pelny_serwis << endl;
 		break;
@@ -448,7 +464,7 @@ inline void Cennik::zmiana_cennika()
 	{
 		int x;
 		cout << "wprowadz cene: " << endl;
-		cin >> x;
+		x = bug_fix();
 		zmiana_wygrzewanie(x);
 		cout << "cena zmieniona na: " << wygrzewanie_butow << endl;
 		break;
@@ -457,7 +473,7 @@ inline void Cennik::zmiana_cennika()
 	{
 		int x;
 		cout << "wprowadz cene: " << endl;
-		cin >> x;
+		x = bug_fix();
 		zmiana_odbarczanie(x);
 		cout << "cena zmieniona na: " << odbarczanie_punktowe << endl;
 		break;
