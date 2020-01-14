@@ -1,2 +1,6 @@
 Narty		Stan: Dobry
 ID: 567819
+Snowboard	Stan: Swietny
+ID: 83123
+Snowboard	Stan: Dobry
+ID: 1343434341

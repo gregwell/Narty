@@ -72,7 +72,7 @@ inline void Zarzadzanie::dodaj_sprzet()
 		cout << "\nID: ";
 		cin >> ID;
 
-		if (ID <= 999999 || ID >= 100000)
+		if (ID <= 999999 && ID >= 100000)
 			break;
 
 		system("cls");
@@ -83,7 +83,7 @@ inline void Zarzadzanie::dodaj_sprzet()
 	cout << sprzet.typ << "  Stan: " << sprzet.stan << endl;
 	cout << "ID: " << ID << endl;
 
-	file << sprzet.typ << "\t\tStan: " << sprzet.stan << endl << "ID: " << ID << endl;
+	file << sprzet.typ << "\tStan: " << sprzet.stan << endl << "ID: " << ID << endl;
 	file.close();
 }
 
