@@ -7,7 +7,7 @@ inline void Zarzadzanie::dodaj_sprzet()
 	file.open("Sprzet.txt", ios::out | ios::app);
 
 	Sprzet sprzet;
-	int ID;
+	long int ID;
 
 	while (1)
 	{
@@ -65,7 +65,23 @@ inline void Zarzadzanie::dodaj_sprzet()
 		cout << "Blad!\n";
 	}
 
+	cout << "Wprowadz numer identyfikacyjny dodanego sprzetu(6-cyfrowy kod)\n";
 
+	while (1)
+	{
+		cout << "\nID: ";
+		cin >> ID;
+
+		if (ID <= 999999 || ID >= 100000)
+			break;
+
+		system("cls");
+		cout << "Wprowadzono niepoprawny kod!\nWprowadz numer identyfikacyjny ponownie!(6-cyfrowy kod)\n";
+	}
+
+	cout << "Zapisano nowy sprzet w bazie danych:\n";
+	cout << sprzet.typ << "\t\tStan: " << sprzet.stan << endl;
+	cout << "ID: " << ID << endl;
 }
 
 
