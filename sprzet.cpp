@@ -64,19 +64,23 @@ inline void Zarzadzanie::dodaj_sprzet()
 	system("cls");
 	cout << "Wprowadz numer identyfikacyjny dodanego sprzetu(6-cyfrowy kod)\n";
 
+
 	while (1)
 	{
 		cout << "\nID: ";
 		cin >> ID;
 
-		if (ID <= 999999 && ID >= 100000 && zgodneID(ID)==false)
+		if (ID <= 999999 && ID >= 100000 && zgodneID(ID)) 
 			break;
+			
+	
 
 		system("cls");
 		cout << "Wprowadzono niepoprawny kod!\nWprowadz numer identyfikacyjny ponownie!(6-cyfrowy kod)\n";
+
 	}
-
-
+	cout << "HUJJJJ3" << endl;
+	wszystkie << ID << endl;
 
 	system("cls");
 	cout << "Zapisano nowy sprzet w bazie danych:\n";
@@ -93,16 +97,14 @@ inline bool Zarzadzanie::zgodneID(long ID)
 	wszystkie.open("wszystkie.txt", ios::in);
 	string temp;
 	long x;
-	for (int x = 1; x <= wszystkie.eof(); x++) {
-		getline(wszystkie, temp);
+	while(!wszystkie.eof()){
 
-		x = atoi(temp.c_str());
+		getline(wszystkie, temp);
+		x = atoi(temp.c_str()); //string -> int (biezaca linia pliku)
 
 		if (ID == x) {
-			cout << "error";
 			return false;
 		}
-
 	}
 	return true;
 }
