@@ -79,7 +79,6 @@ inline void Zarzadzanie::dodaj_sprzet()
 		cout << "Wprowadzono niepoprawny kod!\nWprowadz numer identyfikacyjny ponownie!(6-cyfrowy kod)\n";
 
 	}
-	cout << "HUJJJJ3" << endl;
 	wszystkie << ID << endl;
 
 	system("cls");
