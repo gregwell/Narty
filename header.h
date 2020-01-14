@@ -60,6 +60,7 @@ public:
 	void dodaj_sprzet();
 	void widok();
 	bool zgodneID(long temp);
+	bool zgodny_naglowek(string naglowek);
 };
 
 class Sprzet

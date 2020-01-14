@@ -50,17 +50,26 @@ inline void Zarzadzanie::dodaj_sprzet()
 
 	string nazwa_pliku;
 	nazwa_pliku = + "sprzet/" + sprzet.typ + rozmiar_sprzetu + ".txt";
+	string naglowek_pliku;
+	naglowek_pliku = sprzet.typ + rozmiar_sprzetu + ".txt\n";
+	string temp_naglowek;
+	temp_naglowek = sprzet.typ + rozmiar_sprzetu + ".txt";
 
 
 	fstream file;
 	file.open(nazwa_pliku, ios::out | ios::app);
 
 	fstream wszystkie;
-	wszystkie.open("wszystkie.txt", ios::out | ios::app);
+	wszystkie.open("sprzet/wszystkie.txt", ios::out | ios::app);
 
-	//fstream naglowki;
-	//naglowki.open("naglowki.txt", ios::out | ios::app);
-	//naglowki << nazwa_pliku;
+
+	fstream naglowki;
+	naglowki.open("sprzet/naglowki.txt", ios::out | ios::app);
+
+	if(zgodny_naglowek(temp_naglowek)) naglowki << naglowek_pliku;
+
+
+	naglowki.close();
 
 
 	long int ID;
@@ -69,6 +78,7 @@ inline void Zarzadzanie::dodaj_sprzet()
 	system("cls");
 	cout << "Wprowadz numer identyfikacyjny dodanego sprzetu(6-cyfrowy kod)\n";
 
+	wszystkie << "0";
 
 	while (1)
 	{
@@ -98,15 +108,32 @@ inline void Zarzadzanie::dodaj_sprzet()
 inline bool Zarzadzanie::zgodneID(long ID)
 {
 	fstream wszystkie;
-	wszystkie.open("wszystkie.txt", ios::in);
+	wszystkie.open("sprzet/wszystkie.txt", ios::in);
 	string temp;
 	long x;
-	while(!wszystkie.eof()){
+	while (!wszystkie.eof()) {
 
 		getline(wszystkie, temp);
 		x = atoi(temp.c_str()); //string -> int (biezaca linia pliku)
 
 		if (ID == x) {
+			return false;
+		}
+	}
+	return true;
+}
+
+inline bool Zarzadzanie::zgodny_naglowek(string naglowek)
+{
+	fstream naglowki;
+	naglowki.open("sprzet/naglowki.txt", ios::in);
+	string temp;
+	string x;
+	while (!naglowki.eof()) {
+
+		getline(naglowki, temp);
+		x = naglowek;
+		if (x == temp) {
 			return false;
 		}
 	}
